@@ -1,0 +1,42 @@
+/courseinstallment:
+    put:
+        tags:
+            - CourseInstallment
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            amount:
+                                type: number
+                                example: ""
+                            dueDate:
+                                type: date
+                                example: "2017/04/04"
+                            txnDate:
+                                type: date
+                                example: "2017/04/04"
+                            isDone:
+                                type: string
+                                example: "Yes"
+                            des:
+                                type: string
+                                example: ""
+                            courseDetails:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "Course Details Id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

@@ -1,0 +1,48 @@
+/topic:
+    put:
+        tags:
+            - Topic
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "Introduction"
+                            des:
+                                type: string
+                                example: "Introduction to Topic"
+                            priority:
+                                type: number
+                                example: 1
+                            parentTopic:
+                                type: string
+                                example: "Parent topic Id"
+                            active:
+                                type: boolean
+                                example: true
+                            updatedBy:
+                                type: string
+                                example: "system"
+                            updatedDate:
+                                type: "string"
+                                example: "20-07-2017"
+                            course:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

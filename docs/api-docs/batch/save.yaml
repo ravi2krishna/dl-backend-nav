@@ -1,0 +1,63 @@
+/batch:
+    put:
+        tags:
+            - Batch
+        description:
+            Create or Update Batch.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "admin"
+                            fromDate:
+                                type: string
+                                example: ""
+                            toDate:
+                                type: string
+                                example: ""
+                            fromTime:
+                                type: string
+                                example: ""
+                            toTime:
+                                type: string
+                                example: ""
+                            des:
+                                type: string
+                                example: "description"
+                            updatedBy:
+                                type: string
+                                example : "system"
+                            updatedDate:
+                                type: string
+                                example: ""
+                            batchType:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "batchtype id"
+                            course:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "course id"
+                            branch:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "branch id"                                                                                
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

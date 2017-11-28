@@ -1,0 +1,57 @@
+/coursedetails:
+    put:
+        tags:
+            - CourseDetails
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            courseOpted:
+                                type: string
+                                example: ""
+                            programName:
+                                type: string
+                                example: ""
+                            typeOfCourse:
+                                type: string
+                                example: ""
+                            duration:
+                                type: number
+                                example: 50
+                            startDate:
+                                type: date
+                                example: "2017/09/01"
+                            endDate:
+                                type: date
+                                example: "2017/09/30"
+                            offeredFee:
+                                type: number
+                                example: 10000
+                            signUpFee:
+                                type: number
+                                example: 5000
+                            specialNeeds:
+                                type: string
+                                example: ""
+                            modeOfPayment:
+                                type: string
+                                example: "online"
+                            guestForm:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "Guest Form Id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

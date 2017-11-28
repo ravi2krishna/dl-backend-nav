@@ -1,0 +1,21 @@
+/batchuser:
+    post:
+        tags:
+          - BatchUser
+        description:
+            search.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            batch:
+                                type: string
+                                example: "batch id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

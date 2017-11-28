@@ -1,0 +1,21 @@
+[
+  {
+    "name": "default",
+    "driver": {
+      "type": "mysql",
+      "host": "35.202.141.121",
+      "port": 3306,
+      "username": "root",
+      "password": "Test!234",
+      "database": "dledu-dev",
+      "usePool": true
+    },
+    "autoSchemaSync": false,
+    "entities": [
+      "dist/entities/*.js"
+    ],
+    "cli": {
+      "entitiesDir": "dist/entities"
+    }
+  }
+]

@@ -1,0 +1,37 @@
+/attendance:
+    put:
+        tags:
+            - Attendance
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            fromTime:
+                                type: string
+                                example: "01:30:45 PM"
+                            toTime:
+                                type: string
+                                example: "02:34:20 PM"
+                            mins:
+                                type: number
+                                example: null
+                            user:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null
+
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

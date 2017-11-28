@@ -1,0 +1,45 @@
+/course:
+    put:
+        tags:
+            - Course
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "admin"
+                            des:
+                                type: string
+                                example: ""
+                            active:
+                                type: boolean
+                                example: true
+                            updatedBy:
+                                type: string
+                                example : "system"
+                            updatedDate:
+                                type: string
+                                example: ""
+                            img:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null
+                                    src:
+                                        type: string
+                                        example: ""
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

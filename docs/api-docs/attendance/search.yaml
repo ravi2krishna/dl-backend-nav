@@ -1,0 +1,21 @@
+/attendance:
+    post:
+        tags:
+          - Attendance
+        description:
+            search.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            user:
+                                type: string
+                                example: "userid"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

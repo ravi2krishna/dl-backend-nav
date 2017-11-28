@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MySql" id="Project_293741e" template="Default" database="MySql" >
+	<schema name="dledu" catalogname="dledu" >
+		<table name="address" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="lane" type="varchar" length="30" jt="12" />
+			<column name="street" type="varchar" length="30" jt="12" />
+			<column name="city" type="varchar" length="30" jt="12" />
+			<column name="state" type="varchar" length="30" jt="12" />
+			<column name="country" type="varchar" length="30" jt="12" >
+				<defo>&#039;INDIA&#039;</defo>
+			</column>
+			<column name="zipcode" type="int" length="10" jt="4" />
+			<index name="pk_address" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="attendance" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="from_time" type="varchar" length="50" jt="12" />
+			<column name="to_time" type="varchar" length="50" jt="12" />
+			<column name="user" type="varchar" length="30" jt="12" />
+			<index name="pk_attendances" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_attendances" unique="NORMAL" >
+				<column name="user" />
+			</index>
+			<fk name="fk_attendances_user" to_schema="dledu" to_table="user" >
+				<fk_column name="user" pk="id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="batch" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="50" jt="12" />
+			<column name="type" type="varchar" length="50" jt="12" />
+			<column name="course" type="varchar" length="50" jt="12" />
+			<column name="from_date" type="varchar" length="50" jt="12" />
+			<column name="to_date" type="varchar" length="50" jt="12" />
+			<column name="from_time" type="varchar" length="50" jt="12" />
+			<column name="to_time" type="varchar" length="50" jt="12" />
+			<column name="des" type="varchar" length="100" jt="12" />
+			<column name="branch" type="varchar" length="50" jt="12" />
+			<index name="pk_batch" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_batch" unique="NORMAL" >
+				<column name="course" />
+			</index>
+			<index name="idx_batch_0" unique="NORMAL" >
+				<column name="branch" />
+			</index>
+			<index name="idx_batch_1" unique="NORMAL" >
+				<column name="type" />
+			</index>
+			<fk name="fk_batch_course" to_schema="dledu" to_table="course" >
+				<fk_column name="course" pk="id" />
+			</fk>
+			<fk name="fk_batch_branch" to_schema="dledu" to_table="branch" >
+				<fk_column name="branch" pk="id" />
+			</fk>
+			<fk name="fk_batch_type_batch" to_schema="dledu" to_table="type_batch" >
+				<fk_column name="type" pk="id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="batch_timing" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="batch_topic" type="varchar" length="50" jt="12" />
+			<column name="from_time" type="varchar" length="50" jt="12" />
+			<column name="to_time" type="varchar" length="50" jt="12" />
+			<column name="hrs" type="varchar" length="50" jt="12" />
+			<column name="user" type="varchar" length="50" jt="12" />
+			<index name="pk_batch_timing" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_batch_timing" unique="NORMAL" >
+				<column name="batch_topic" />
+			</index>
+			<index name="idx_batch_timing" unique="NORMAL" >
+				<column name="user" />
+			</index>
+			<fk name="fk_batch_timing_batch_topic" to_schema="dledu" to_table="batch_topic" >
+				<fk_column name="batch_topic" pk="id" />
+			</fk>
+			<fk name="fk_batch_timing_user" to_schema="dledu" to_table="user" >
+				<fk_column name="user" pk="id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="batch_topic" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="batch" type="varchar" length="50" jt="12" />
+			<column name="status" type="varchar" length="50" jt="12" />
+			<column name="topic" type="varchar" length="50" jt="12" />
+			<index name="pk_batch_topic" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_batch_topic" unique="NORMAL" >
+				<column name="batch" />
+			</index>
+			<index name="idx_batch_topic" unique="NORMAL" >
+				<column name="status" />
+			</index>
+			<index name="idx_batch_topic_0" unique="NORMAL" >
+				<column name="topic" />
+			</index>
+			<fk name="fk_batch_topic_batch" to_schema="dledu" to_table="batch" >
+				<fk_column name="batch" pk="id" />
+			</fk>
+			<fk name="fk_batch_topic_status_batch" to_schema="dledu" to_table="status_batch" >
+				<fk_column name="status" pk="id" />
+			</fk>
+			<fk name="fk_batch_topic_batch_topic" to_schema="dledu" to_table="topic" >
+				<fk_column name="topic" pk="id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="batch_user" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="user" type="varchar" length="50" jt="12" />
+			<column name="batch" type="varchar" length="50" jt="12" />
+			<index name="pk_batch_user" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_batch_user" unique="NORMAL" >
+				<column name="user" />
+			</index>
+			<fk name="fk_batch_user_user" to_schema="dledu" to_table="user" >
+				<fk_column name="user" pk="id" />
+			</fk>
+			<fk name="fk_batch_user_batch_user" to_schema="dledu" to_table="batch" >
+				<fk_column name="batch" pk="id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="branch" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="title" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="email" type="varchar" length="100" jt="12" />
+			<column name="mobile" type="varchar" length="15" jt="12" />
+			<column name="phone" type="varchar" length="15" jt="12" />
+			<column name="xCord" type="varchar" length="30" jt="12" />
+			<column name="yCord" type="varchar" length="30" jt="12" />
+			<column name="address" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_branch" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="branch_fk_address" unique="NORMAL" >
+				<column name="address" />
+			</index>
+			<fk name="branch_fk_address" to_schema="dledu" to_table="address" >
+				<fk_column name="address" pk="id" />
+			</fk>
+		</table>
+		<table name="course" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="des" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="img" type="varchar" length="30" jt="12" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_course_0" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="course_fk_img_0" unique="NORMAL" >
+				<column name="img" />
+			</index>
+			<fk name="fk_course_img" to_schema="dledu" to_table="img" >
+				<fk_column name="img" pk="id" />
+			</fk>
+		</table>
+		<table name="img" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="src" type="longtext" jt="-1" />
+			<index name="pk_img_0" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="link" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="url" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="icon" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="priority" type="int" length="10" jt="4" mandatory="y" >
+				<defo>999</defo>
+			</column>
+			<index name="pk_link" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="menu" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="role" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="link" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_menu" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="menu_fk_link" unique="NORMAL" >
+				<column name="link" />
+			</index>
+			<index name="menu_fk_role" unique="NORMAL" >
+				<column name="role" />
+			</index>
+			<fk name="menu_fk_link" to_schema="dledu" to_table="link" >
+				<fk_column name="link" pk="id" />
+			</fk>
+			<fk name="menu_fk_role" to_schema="dledu" to_table="type_role" >
+				<fk_column name="role" pk="id" />
+			</fk>
+		</table>
+		<table name="status_batch" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="100" jt="12" />
+			<column name="active" type="varchar" length="50" jt="12" />
+			<column name="updated_by" type="varchar" length="50" jt="12" />
+			<column name="updated_date" type="date" jt="91" />
+			<index name="pk_type_batch_0" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="timing" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="30" jt="12" />
+			<column name="code" type="varchar" length="30" jt="12" />
+			<index name="pk_timing" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="topic" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="des" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="priority" type="int" length="10" jt="4" mandatory="y" >
+				<defo>999</defo>
+			</column>
+			<column name="course" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="parent_topic" type="varchar" length="30" jt="12" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_topic_0" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="topic_fk_course_0" unique="NORMAL" >
+				<column name="course" />
+			</index>
+			<fk name="fk_topic_course" to_schema="dledu" to_table="course" >
+				<fk_column name="course" pk="id" />
+			</fk>
+		</table>
+		<table name="type_batch" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="100" jt="12" />
+			<column name="active" type="varchar" length="50" jt="12" />
+			<column name="updated_by" type="varchar" length="50" jt="12" />
+			<column name="updated_date" type="date" jt="91" />
+			<index name="pk_type_batch" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="type_role" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="code" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_type_role" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="type_role_uq_code_name" unique="UNIQUE" >
+				<column name="code" />
+				<column name="name" />
+			</index>
+		</table>
+		<table name="user" >
+			<column name="id" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="50" jt="12" mandatory="y" >
+				<defo>&#039;Anonymous&#039;</defo>
+			</column>
+			<column name="email" type="varchar" length="100" jt="12" />
+			<column name="mobile" type="varchar" length="15" jt="12" />
+			<column name="password" type="varchar" length="30" jt="12" mandatory="y" >
+				<defo>&#039;0&#039;</defo>
+			</column>
+			<column name="role" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="address" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="branch" type="varchar" length="30" jt="12" mandatory="y" />
+			<column name="active" type="bit" jt="-7" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="updated_by" type="varchar" length="30" jt="12" >
+				<defo>&#039;system&#039;</defo>
+			</column>
+			<column name="updated_date" type="timestamp" length="19" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<index name="pk_user" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="user_fk_address" unique="NORMAL" >
+				<column name="address" />
+			</index>
+			<index name="user_fk_branch" unique="NORMAL" >
+				<column name="branch" />
+			</index>
+			<index name="user_fk_role" unique="NORMAL" >
+				<column name="role" />
+			</index>
+			<fk name="user_fk_branch" to_schema="dledu" to_table="branch" >
+				<fk_column name="branch" pk="id" />
+			</fk>
+			<fk name="user_fk_role" to_schema="dledu" to_table="type_role" >
+				<fk_column name="role" pk="id" />
+			</fk>
+			<fk name="fk_user_address" to_schema="dledu" to_table="address" >
+				<fk_column name="address" pk="id" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="AmazonRedshift" database="AmazonRedshift" host="localhost" port="5439" />
+	<connector name="MySql" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-5.1.40-bin.jar" driver_desc="Standard" host="localhost" port="3306" user="root" passwd="VGVzdCEyMzQ=" />
+	<layout name="Default Layout" id="Layout_14b01c8" show_relation="columns" >
+		<comment><![CDATA[Default Layout]]></comment>
+		<entity schema="dledu" name="menu" color="c1d8ee" x="345" y="105" />
+		<entity schema="dledu" name="type_role" color="c1d8ee" x="510" y="90" />
+		<entity schema="dledu" name="branch" color="c1d8ee" x="45" y="315" />
+		<entity schema="dledu" name="user" color="c1d8ee" x="45" y="90" />
+		<entity schema="dledu" name="address" color="c1d8ee" x="225" y="90" />
+		<entity schema="dledu" name="type_batch" color="c1d8ee" x="825" y="150" />
+		<entity schema="dledu" name="course" color="c1d8ee" x="180" y="360" />
+		<entity schema="dledu" name="img" color="c1d8ee" x="300" y="285" />
+		<entity schema="dledu" name="link" color="c1d8ee" x="495" y="270" />
+		<entity schema="dledu" name="status_batch" color="c1d8ee" x="720" y="300" />
+		<entity schema="dledu" name="batch_timing" color="c1d8ee" x="870" y="405" />
+		<entity schema="dledu" name="attendance" color="c1d8ee" x="675" y="75" />
+		<entity schema="dledu" name="batch" color="c1d8ee" x="600" y="255" />
+		<entity schema="dledu" name="batch_topic" color="c1d8ee" x="570" y="480" />
+		<entity schema="dledu" name="topic" color="c1d8ee" x="360" y="300" />
+		<entity schema="dledu" name="batch_user" color="c1d8ee" x="870" y="285" />
+		<entity schema="dledu" name="timing" color="c1d8ee" x="825" y="45" />
+	</layout>
+	<layout name="Sample Layout with Groups" id="Layout_34ee3d2" show_relation="columns" >
+		<entity schema="dledu" name="address" color="c1d8ee" x="210" y="225" />
+		<entity schema="dledu" name="branch" color="c1d8ee" x="210" y="495" />
+		<entity schema="dledu" name="link" color="c1d8ee" x="570" y="420" />
+		<entity schema="dledu" name="menu" color="c1d8ee" x="405" y="225" />
+		<entity schema="dledu" name="type_role" color="c1d8ee" x="570" y="225" />
+		<entity schema="dledu" name="user" color="c1d8ee" x="45" y="225" />
+		<callout x="45" y="75" pointer="NO" >
+			<comment><![CDATA[For a better understanding of the schema create multiple layouts (diagrams). 
+Layouts will be saved to project file. One table may show in different layouts.
+ 
+Double-click any column, foreign key or table headers to edit.
+Create foreign keys by drag and drop of one column over a primary key column.
+Foreign keys can be marked as virtual and they won't be created in the database.]]></comment>
+		</callout>
+		<group name="user" color="ecf0f7" >
+			<entity schema="dledu" name="user" />
+			<entity schema="dledu" name="address" />
+			<entity schema="dledu" name="branch" />
+		</group>
+		<group name="menu" color="f7f3ec" >
+			<entity schema="dledu" name="menu" />
+			<entity schema="dledu" name="type_role" />
+			<entity schema="dledu" name="link" />
+		</group>
+	</layout>
+	<layout name="Sample Layout with Relational Data Browse" id="Layout_55ea145" show_relation="columns" >
+		<entity schema="dledu" name="address" color="c1d8ee" x="210" y="165" />
+		<entity schema="dledu" name="branch" color="c1d8ee" x="210" y="435" />
+		<entity schema="dledu" name="link" color="c1d8ee" x="570" y="360" />
+		<entity schema="dledu" name="menu" color="c1d8ee" x="405" y="165" />
+		<entity schema="dledu" name="type_role" color="c1d8ee" x="570" y="165" />
+		<entity schema="dledu" name="user" color="c1d8ee" x="45" y="165" />
+		<callout x="45" y="45" pointer="NO" >
+			<comment><![CDATA[The editor below is Relational Data Browse for exploring data from multiple tables bind by foreign keys.
+If your schema is missing foreign keys create VIRTUAL foreign keys. Virtual foreign keys will be saved to project file. 
+ 
+Each browsed table on the bottom has an arrow near the title which you can press to descend into children tables .
+Right-click record headers to set filters and ordering.]]></comment>
+		</callout>
+		<browser id="Browse_577db85" name="Sample Relational Data Browse" confirm_updates="y" >
+			<browse_table schema="dledu" entity="user" x="20" y="20" width="400" height="300" />
+		</browser>
+	</layout>
+</project>

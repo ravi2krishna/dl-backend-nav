@@ -1,0 +1,77 @@
+/batchtopic:
+    put:
+        tags:
+            - BatchTopic
+        description:
+            Create or Update BatchTopic.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            batch:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "batchid"
+                            status:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "statusid"
+                            topic:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "topicid"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"
+
+# /batchtopic:
+#     put:
+#         tags:
+#             - BatchTopic
+#         description:
+#             save.
+#         parameters:
+#           - name: body
+#             in: body
+#             schema:
+#                 type: object
+#                 properties:
+#                     data:
+#                         type: object
+#                         properties:
+#                             id:
+#                                 type: string
+#                                 example: null
+#                             status:
+#                                 type: object
+#                                 properties:
+#                                     id:
+#                                         type: string
+#                                         example: null
+#                             batch:
+#                                 type: object
+#                                 properties:
+#                                     id: string
+#                                     example: null
+#                             topic:
+#                                 type: object
+#                                 properties:
+#                                     id: string
+#                                     example: null
+#         responses:
+#             200:
+#                 description: "status:1 is success; status: 0 is failure;"

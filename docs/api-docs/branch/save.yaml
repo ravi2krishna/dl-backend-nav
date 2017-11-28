@@ -1,0 +1,75 @@
+/branch:
+    put:
+        tags:
+            - Branch
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "Digital Lync"
+                            title:
+                                type: string
+                                example: "Kukatpally"
+                            email:
+                                type: string
+                                example: ""
+                            mobile:
+                                type: string
+                                example: "123456789"
+                            phone:
+                                type: string
+                                example: "040-66166616"
+                            xCord:
+                                type: string
+                                example: ""
+                            yCord:
+                                type: string
+                                example: ""
+                            active:
+                                type: boolean
+                                example: "true"
+                            updatedBy:
+                                type: string
+                                example: "system"
+                            updatedDate:
+                                type: "string"
+                                example: "20-07-2017"
+                            address:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null
+                                    lane:
+                                        type: string
+                                        example: ""
+                                    street:
+                                        type: string
+                                        example: ""
+                                    city:
+                                        type: string
+                                        example: "Hyderabad"
+                                    state:
+                                        type: string
+                                        example: "Telangana"
+                                    country:
+                                        type: string
+                                        example: "India"
+                                    zipcode:
+                                        type: string
+                                        example: "500089"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

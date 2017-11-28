@@ -1,0 +1,32 @@
+/batchuser:
+    put:
+       tags:
+           - BatchUser
+       description:
+           save.
+       parameters:
+         - name: body
+           in: body
+           schema:
+               type: object
+               properties:
+                   data:
+                       type: object
+                       properties:
+                           users:
+                               type: array
+                               items:
+                                   type: object
+                                   properties:
+                                       id:
+                                           type: string
+                                           example: "id1"
+                           batch:
+                               type: object
+                               properties:
+                                   id:
+                                       type: string
+                                       example: null
+       responses:
+           200:
+               description: "status:1 is success; status: 0 is failure;"

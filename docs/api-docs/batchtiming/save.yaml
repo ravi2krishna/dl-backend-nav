@@ -1,0 +1,48 @@
+/batchtiming:
+    put:
+        tags:
+            - BatchTiming
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            fromTime:
+                                type: string
+                                example: ""
+                            toTime:
+                                type: string
+                                example: ""
+                            mins:
+                                type: integer
+                                example: "60MINS"
+                            updatedBy:
+                                type: string
+                                example: "system"
+                            updatedDate:
+                                type: string
+                                example: "10/08/2017"
+                            batch:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null
+                            user:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: null  
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

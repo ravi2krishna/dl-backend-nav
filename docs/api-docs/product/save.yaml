@@ -1,0 +1,45 @@
+/product:
+    put:
+        tags:
+            - Product
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: ""
+                            description:
+                                type: string
+                                example: ""
+                            hsnCode:
+                                type: string
+                                example: ""
+                            cgst:
+                                type: string
+                                example: ""
+                            sgst:
+                                type: string
+                                example: ""
+                            igst:
+                                type: string
+                                example: ""
+                            buyingPrice:
+                                type: string
+                                example: ""
+                            unitPrice:
+                                type: string
+                                example: ""
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

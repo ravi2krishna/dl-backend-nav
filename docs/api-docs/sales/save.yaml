@@ -1,0 +1,61 @@
+/sales:
+    put:
+        tags:
+            - Sales
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            invoiceDate:
+                                type: date
+                                example: "2017/01/20"
+                            invoiceNo:
+                                type: string
+                                example: ""
+                            referenceNo:
+                                type: string
+                                example: ""
+                            des:
+                                type: string
+                                example: ""
+                            isIgst:
+                                type: boolean
+                                example: ""
+                            subTotal:
+                                type: string
+                                example: ""
+                            discountValue:
+                                type: string
+                                example: ""
+                            taxAmount:
+                                type: string
+                                example: ""
+                            totalAmount:
+                                type: string
+                                example: ""
+                            branch:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "branch id"  
+                            user:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "User Id"
+
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

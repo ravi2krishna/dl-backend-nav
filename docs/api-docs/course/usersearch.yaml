@@ -1,0 +1,21 @@
+/course/user:
+    post:
+        tags:
+          - Course
+        description:
+            User Specific Courses.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            user:
+                                type: string
+                                example: "User ID"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

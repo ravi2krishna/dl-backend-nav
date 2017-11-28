@@ -1,0 +1,1934 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' >
+<head>
+<title>Default Layout</title>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<style type='text/css'>
+body {
+    font-family: 'Segoe UI', 'Lucida sans', Dialog;
+    font-size: 13px;
+    color: #444;
+    margin: 10px;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    caption-side: top;
+    width: auto;
+    margin: 10px 15px 5px 0;
+}
+
+
+.bordered td, .bordered th {
+   background-color: #fafafa;
+   border: 1px solid #D5D5D5;
+   padding: 3px 3px 3px 3px;
+   white-space:pre-wrap!important;
+}
+
+.bordered th {
+    background-color: #f0f0f0;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 3px 3px 3px 3px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+    color: #333333;
+}
+
+.section-header h2 {
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-weight: normal;
+    border-top: solid 1px #D5D5D5;
+    border-bottom: solid 1px #D5D5D5;
+    width: 95%;
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    color: #4d82b8;
+}
+.section-header div {
+    font-size: 70%;
+    padding-left: 5px;
+}
+
+
+a, a:visited, a:hover, a:active {
+  color: #044282;
+  text-decoration: none;
+}
+
+th > a {
+    color:#858585;
+}
+
+.lg {
+    font-size: 110%;
+}
+
+h1 {
+    font-family: Verdana,Arial,Helvetica;
+    font-weight: normal;
+    color: #4d82b8;
+    margin: 20px 0 10px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class='svg-container'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' text-rendering='optimizeLegibility'   width='1005' height='740' viewbox='0 0 1005 740' >
+  <script type='text/ecmascript'>
+  <![CDATA[
+  function hghl(el) { for ( var i in el ){ document.getElementById(el[i]).setAttribute('class','highlight');  }  }
+  function uhghl(el) { for ( var i in el ){ document.getElementById(el[i]).setAttribute('class','scene'); }  } 
+  ]]>
+  </script> 
+
+<style type='text/css'>
+  text                { fill:#000000; font-family: Tahoma, 'Trebuchet MS', Dialog; font-size:11px; }
+  a text:hover        { text-shadow: 0 0 6px #d0ce00; }
+  text.highlight      { text-shadow: 0 0 4px #eac533; }
+  text.colType        { fill:#b3b3b3; }
+  text.relName        { fill:#b09c7c; }
+  path                { stroke:#5c554f; stroke-width:1.15; fill:none; }
+  path.virtual        { stroke:#b7642d; }
+  path.dotted         { stroke-dasharray:4,2; }
+  path.scene          { stroke-width:10; opacity:0;}
+  path.highlight      { stroke-width:5; stroke:#eac533; opacity:0.6;}
+  rect.table          { fill:#ffffff; stroke:#aaa; stroke-width:1;shape-rendering:crispEdges;filter:url(#shadow); }
+  line.delim          { stroke-width:1; shape-rendering:crispEdges; }
+  text.callout        { fill:#000000; font-family: Tahoma, 'Trebuchet MS', Dialog; font-size:11px; }
+  rect.callout        { fill:url(#calloutGradient); stroke:#bebdbd; stroke-width:0.5; filter: url(#shadow);}
+  rect.grp            { stroke:#b1b1b1; stroke-width:1.7; opacity:0.8; }
+</style>
+<defs>
+  <pattern id='layoutBgA' patternUnits='userSpaceOnUse'  width='10' height='20' x='0' y='0' viewBox='0 0 5 10'>  
+     <line x1='-2' y1='1' x2='7' y2='10' stroke='#efefef' stroke-width='.5'/>  
+     <line x1='-2' y1='6' x2='7' y2='15' stroke='#efefef' stroke-width='.5'/>  
+     <line x1='-2' y1='-4' x2='7' y2='5' stroke='#efefef' stroke-width='.5'/>  
+  </pattern>  
+  <radialGradient id='layoutBgB' gradientUnits='userSpaceOnUse' cx='50%' cy='50%' r='75%' fx='46%' fy='22%'>
+     <stop offset='0%' stop-opacity='.2' stop-color='#f5f5f5' />  
+     <stop offset='100%' stop-color='#efefef' />  
+  </radialGradient>
+  <pattern id='layoutBgTr' patternUnits='userSpaceOnUse'  width='300' height='300' x='0' y='0' viewBox='0 0 300 300'>  
+    <text x='-55' y='200' transform='rotate(-45)' style='font-family:Arial;font-size:48px;font-weight:bold;fill:#e7e7e7;'>&#84;&#82;&#73;&#65;&#76;</text> 
+    <text x='-130' y='230' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#77;ove &#116;he m&#111;use &#111;ver &#116;ables</text> 
+    <text x='-85' y='250' transform='rotate(-45)' style='font-family:Arial;font-size:24px;font-weight:bold;fill:#e7e7e7;'>&#116;o re&#97;d &#116;he c&#111;mmen&#116;s</text> 
+  </pattern>  
+  <linearGradient id='groupUnderTitleLine' x1='0%' y1='0%' x2='100%' y2='0%' >
+          <stop offset='0%' stop-color='#999999' stop-opacity='0.7'/> 
+          <stop offset='100%' stop-color='#999999' stop-opacity='0' /> 
+   </linearGradient>
+  <radialGradient id='calloutGradient' cx='25%' cy='20%' r='80%' fx='10%' fy='10%'>
+	   <stop offset='0%' stop-color='#ffffff' />
+    <stop offset='100%' stop-color='#f8f6d1' />
+  </radialGradient>
+  <filter id='shadow' width='120%' height='120%'> 
+      <feOffset result='offOut' in='SourceGraphic' dx='1' dy='1' /> 
+      <feColorMatrix result='matrixOut' in='offOut' type='matrix' 
+      values='0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.3 0' /> 
+      <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='3' /> 
+      <feBlend in='SourceGraphic' in2='blurOut' mode='normal' /> 
+    </filter> 
+  <filter id='fkShadow' height='130%'> 
+    <feGaussianBlur in='SourceAlpha' stdDeviation='1.5'/> <!-- stdDeviation is how much to blur -->
+    <feOffset dx='1.2' dy='1.2' result='offsetblur'/> <!-- how much to offset -->
+    <feMerge>
+    <feMergeNode/> <!-- this contains the offset blurred image -->
+    <feMergeNode in='SourceGraphic'/> <!-- this contains the element that the filter is applied to -->
+    </feMerge>
+  </filter>
+  <radialGradient id='legendGradient' fx='5%' fy='5%' r='75%' spreadMethod='pad'>
+          <stop offset='0%' stop-color='#eefbf2' stop-opacity='1'/> 
+          <stop offset='100%' stop-color='#cff9cb' stop-opacity='1' /> 
+   </radialGradient>
+  <symbol id='calloutArrowDown' overflow='visible' >
+      <path d='M 0,0 L 7,11 L 15,0 z' style='fill:#f8f6d1;stroke:none; filter: url(#shadow);' />
+      <path d='M 0,0 L 7,11 L 15,0' style='stroke:#bebdbd; stroke-width:0.5;' />
+  </symbol>
+  <symbol id='calloutArrowUp' overflow='visible' >
+      <path d='M 0,15 L 7,3 L 15,15 z' style='fill:#ffffff; stroke:none; filter: url(#shadow);' />
+      <path d='M 0,15 L 7,3 L 15,15' style='stroke:#bebdbd; stroke-width:0.5;' />
+  </symbol>
+  <symbol id='pk' overflow='visible' >
+    <g transform='scale(0.99)'>
+     <path style='fill:#fffa7d;stroke:#765f03;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;'
+        d='M 9.3678877,3.5695485 C 9.1030218,3.2729386 9.0796382,2.7628519 9.3396185,2.4517097 9.5449651,2.1956495 9.9040386,2.0980533 10.199638,2.2169415 10.533525,2.3415459 10.775153,2.706942 10.750675,3.0842709 10.737029,3.3980003 10.541153,3.699122 10.258248,3.8066067 9.966649,3.9250429 9.6169668,3.8418805 9.4008073,3.6062324 9.3894892,3.5943518 9.3785264,3.582104 9.3678886,3.5695487 z M 11.226617,6.9916004 C 11.888137,6.3548946 12.293488,5.4172188 12.311087,4.442353 12.378144,2.7379364 11.248678,1.0541269 9.7322318,0.44767357 8.3887112,-0.1280313 6.7865012,0.26822889 5.8918395,1.4007929 5.080823,2.3839145 4.9336815,3.8452096 5.3635544,5.101615 L 4.3670905,5.315913 C 4.0664984,5.3682645 4.0967703,5.6316724 4.2574957,5.8208829 L 4.9124,6.5655244 4.1543436,7.2512357 3.2136002,7.2163506 3.1674775,8.5586827 2.0406832,8.5086512 1.5965306,8.9299953 1.5471661,10.179833 0.75616674,10.195223 0.2112857,10.758575 0.15354288,11.735988 0.07199052,12.765553 c 0.36440953,0.238225 0.79006967,0.195492 1.44938278,-0.02675 L 6.3033562,8.1282037 6.8217102,8.6765688 C 6.9985465,8.8799427 7.3003699,8.7497574 7.358381,8.5016252 L 7.4938877,7.5084164 c 0.8537488,0.3985387 1.8303125,0.4711541 2.6851793,0.1427713 0.393927,-0.1407258 0.746858,-0.3701772 1.04755,-0.6595873 z'/>
+     <path d='M 6.8014948,6.3102123 0.15369063,13.024481 0.21560535,12.141962 6.0062342,6.2683782 z'
+        style='fill:#ffe5a5;fill-opacity:1;stroke:#854e31;stroke-width:0.06912433;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:3.00300009'/>
+    </g>
+  </symbol>
+  <symbol id='unq' overflow='visible' >
+    <g transform='scale(0.99)'>
+      <rect style='fill:#fbea8e;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+         width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14' transform='matrix(0.701,0.713,-0.727,0.685,0,0)' />
+      <path style='fill:white;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+         d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+         transform='matrix(1.025,0,0,0.987,-14.690,-3.862)' />
+      <text x='5.8' y='7.4' style='font-size:7px;fill:#8a8a8a;'>1</text>
+    </g>
+  </symbol>
+  <symbol id='idx' overflow='visible' >
+    <g transform='scale(0.99)'>
+      <rect style='fill:#fbea8e;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+         width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14' transform='matrix(0.701,0.713,-0.727,0.685,0,0)' />
+      <path style='fill:white;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+         d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+         transform='matrix(1.025,0,0,0.987,-14.690,-3.862)' />
+    </g>
+  </symbol>
+  <symbol id='fk' overflow='visible' >
+    <g transform='scale(0.87)'>
+      <path style='fill:#f3e1b7;stroke:#7e471f;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+      d='M 12.48,0.33 7.07,0.89 9.067,2.974 0.329,11.731 1.073,12.597 9.811,3.841 11.77,5.78 z' />
+    </g>
+  </symbol>
+  <symbol id='ref' overflow='visible' >
+    <g transform='scale(0.87)'>
+      <path style='fill:#f3e1b7;stroke:#7e471f;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+          d='M 0.10,12.70 5.31,12.15 3.40,10.06 11.82,1.32 11.11,0.45 2.68,9.19 0.80,7.24 z'/>
+    </g>
+  </symbol>
+  <symbol id='flag0' overflow='visible' >
+    <g transform='scale(0.92)'>
+      <path style='fill:#b7d0f6;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+          d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+    </g>
+  </symbol>
+  <symbol id='flag1' overflow='visible' >
+    <g transform='scale(0.92)'>
+      <path style='fill:#f4a393;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+          d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+    </g>
+  </symbol>
+  <symbol id='flag2' overflow='visible' >
+    <g transform='scale(0.92)'>
+      <path style='fill:#77ec8b;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+          d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+    </g>
+  </symbol>
+  <symbol id='nn' overflow='visible' >
+  <path style='stroke:#9b3e50;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+          d='M 0,0 3,3 M 0,3 3,0 z'/>
+  </symbol>
+  <symbol id='view' overflow='visible' >
+    <g transform='scale(0.99)'>
+     <line x1='12' y1='6' x2='19' y2='0' stroke='black' stroke-width='0.5' />
+     <line x1='0' y1='6' x2='7' y2='0' stroke='black' stroke-width='0.5' />
+     <circle cx='3' cy='6' r='3' fill='#f9ebbc' stroke='black' stroke-width='0.5'/>
+     <circle cx='10' cy='6' r='3' fill='#f9ebbc' stroke='black' stroke-width='0.5'/>
+    </g>
+  </symbol>
+  <marker id='arrow01' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 7.500,3.750 L 15.000,3.750 L 7.500,0.000 L 15.000,3.750 L 7.500,7.500' />
+  </marker>
+  <marker id='arrow1' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 7.500,3.750 L 15.000,3.750 L 7.500,0.000 L 15.000,3.750 L 7.500,7.500' />
+  </marker>
+  <marker id='foot01' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 0.00,3.75 L 15.00,3.75 z' />
+    <circle cx='11.25' cy='3.75' r='2.50' style='fill:white;stroke:#5e554d;' />
+    <path d='M 3.75,0.00 L 3.75, 7.50 z' />
+  </marker>
+  <marker id='foot0p' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 0.00,3.75 L 15.00,3.75 z' />
+    <circle cx='11.25' cy='3.75' r='2.50' style='fill:white;stroke:#5e554d;' />
+    <path d='M 0.00,0.00 L 7.50,3.75 L 0.00,7.50' />
+  </marker>
+  <marker id='foot1' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 0.00,3.75 L 15.00,3.75 z' />
+    <path d='M 7.50,0.00 L 7.50, 7.50 z' />
+    <path d='M 3.75,0.00 L 3.75, 7.50 z' />
+  </marker>
+  <marker id='foot1p' viewBox='0 0 15.00 7.50' refX='7.50' refY='3.75' markerUnits='strokeWidth' markerWidth='15.00' markerHeight='7.50' orient='auto'>
+    <path d='M 0.00,3.75 L 15.00,3.75 z' />
+    <path d='M 7.50,0.00 L 7.50, 7.50 z' />
+    <path d='M 0.00,0.00 L 7.50,3.75 L 0.00,7.50' />
+  </marker>
+  <linearGradient id='tbg_c1d8ee' x1='0%' y1='0%' x2='0%' y2='100%' >
+     <stop offset='0%' stop-color='#e0ecf8' /> 
+     <stop offset='100%' stop-color='#c1d8ee' /> 
+  </linearGradient>
+</defs>
+
+<!-- ============= Desktop ============= -->
+<rect x='1' y='1' width='1003' height='738' rx='7' ry='7' style='fill:url(#layoutBgB); stroke:#333333; stroke-width:0.5;' />
+<rect x='1' y='1' width='1003' height='738' rx='7' ry='7' style='fill:url(#layoutBgTr);' />
+<rect x='1' y='1' width='1003' height='738' rx='7' ry='7' style='fill:url(#layoutBgA); stroke:#333333; stroke-width:0.5;' />
+
+<!-- ============= Legend ============= -->
+<g transform='translate(10,10)'>
+  <rect x='10' y='10' width='330' height='52' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#shadow);'/> 
+  <text x='65' y='33'>Default Layout</text> 
+  <text x='65' y='49' style='fill:#aaaaaa; font-size:11px;'><tspan>Read table &amp; column comments as mouse-over tooltips.</tspan></text> 
+<g transform="scale(0.75,0.75) translate(10,7)" > <a xlink:href='http://www.dbschema.com'> <rect style="fill:#eb7f2c;stroke:none;shape-rendering:geometricPrecision;" width="13.27" height="11.26" x="40.04" y="59.44" ry="3.14" transform="matrix(0.90187511,-0.43199686,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.27" height="11.26" x="54.83" y="59.57" ry="3.14" transform="matrix(0.90187511,-0.43199686,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.27" height="11.26" x="40.35" y="71.62" ry="3.14" transform="matrix(0.90187511,-0.43199686,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.27" height="11.26" x="54.68" y="71.75" ry="3.14" transform="matrix(0.90187511,-0.43199686,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.35" height="11.20" x="13.48" y="19.67" ry="3.12" transform="matrix(0.84723158,0.53122372,0,1,0,0)" /> <rect style="fill:#eb7f2c;stroke:none;shape-rendering:geometricPrecision;" width="13.35" height="11.20" x="28.36" y="19.80" ry="3.12" transform="matrix(0.84723158,0.53122372,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.35" height="11.20" x="13.79" y="31.78" ry="3.12" transform="matrix(0.84723158,0.53122372,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.35" height="11.20" x="28.21" y="31.92" ry="3.12" transform="matrix(0.84723158,0.53122372,0,1,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.49" height="14.24" x="34.59" y="-9.62" ry="3.97" transform="matrix(0.85815392,0.51339249,-0.91732703,0.39813455,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.49" height="14.24" x="49.63" y="-9.46" ry="3.97" transform="matrix(0.85815392,0.51339249,-0.91732703,0.39813455,0,0)" /> <rect style="fill:#2c49eb;stroke:none;shape-rendering:geometricPrecision;" width="13.49" height="14.24" x="34.90" y="5.77"  ry="3.97" transform="matrix(0.85815392,0.51339249,-0.91732703,0.39813455,0,0)" /> <rect style="fill:#eb7f2c;stroke:none;shape-rendering:geometricPrecision;" width="13.49" height="14.24" x="49.47" y="5.93"  ry="3.97" transform="matrix(0.85815392,0.51339249,-0.91732703,0.39813455,0,0)" /> <title>Generated using DbSchema - www.dbschema.com</title> </a></g>
+</g>
+
+<g transform='translate(0,110)'>
+<!-- ============= Fk 'menu_menu_fk_link' ============= -->
+<path id='menu_menu_fk_link'  onmouseover="hghl(['menu_menu_fk_link','dledu.menu.link','dledu.link.id'])" onmouseout="uhghl(['menu_menu_fk_link','dledu.menu.link','dledu.link.id'])" transform='translate(7,0)' class='scene' d='M 450 225 L 457,225 Q 465,225 465,232 L 465,262 Q 465,270 472,270 L 480,270' >
+	<title>Fk menu_fk_link
+menu ref link ( link -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 450 225 L 457,225 Q 465,225 465,232 L 465,262 Q 465,270 472,270 L 480,270' ></path>
+<text x='457' y='220' transform='rotate(0 457,220)' title='Fk menu_fk_link
+menu ref link ( link -&gt; id )' class='relName' style='fill:#748ea7'>link</text>
+<!-- ============= Fk 'menu_menu_fk_role' ============= -->
+<path id='menu_menu_fk_role'  onmouseover="hghl(['menu_menu_fk_role','dledu.menu.role','dledu.type_role.id'])" onmouseout="uhghl(['menu_menu_fk_role','dledu.menu.role','dledu.type_role.id'])" transform='translate(7,0)' class='scene' d='M 450 120 L 495,120' >
+	<title>Fk menu_fk_role
+menu ref type_role ( role -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 450 120 L 495,120' ></path>
+<text x='457' y='115' transform='rotate(0 457,115)' title='Fk menu_fk_role
+menu ref type_role ( role -&gt; id )' class='relName' style='fill:#748ea7'>role</text>
+<!-- ============= Fk 'branch_branch_fk_address' ============= -->
+<path id='branch_branch_fk_address'  onmouseover="hghl(['branch_branch_fk_address','dledu.branch.address','dledu.address.id'])" onmouseout="uhghl(['branch_branch_fk_address','dledu.branch.address','dledu.address.id'])" transform='translate(7,0)' class='scene' d='M 150 330 L 232,330 Q 240,330 240,322 L 240,240' >
+	<title>Fk branch_fk_address
+branch ref address ( address -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 150 330 L 232,330 Q 240,330 240,322 L 240,240' ></path>
+<text x='157' y='325' transform='rotate(0 157,325)' title='Fk branch_fk_address
+branch ref address ( address -&gt; id )' class='relName' style='fill:#748ea7'>address</text>
+<!-- ============= Fk 'user_user_fk_branch' ============= -->
+<path id='user_user_fk_branch'  onmouseover="hghl(['user_user_fk_branch','dledu.user.branch','dledu.branch.id'])" onmouseout="uhghl(['user_user_fk_branch','dledu.user.branch','dledu.branch.id'])" transform='translate(7,0)' class='scene' d='M 30 270 L 22,270 Q 15,270 15,277 L 15,307 Q 15,315 22,315 L 30,315' >
+	<title>Fk user_fk_branch
+user ref branch ( branch -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 30 270 L 22,270 Q 15,270 15,277 L 15,307 Q 15,315 22,315 L 30,315' ></path>
+<text x='4' y='265' transform='rotate(0 4,265)' title='Fk user_fk_branch
+user ref branch ( branch -&gt; id )' class='relName' style='fill:#748ea7'>branch</text>
+<!-- ============= Fk 'user_user_fk_role' ============= -->
+<path id='user_user_fk_role'  onmouseover="hghl(['user_user_fk_role','dledu.user.role','dledu.type_role.id'])" onmouseout="uhghl(['user_user_fk_role','dledu.user.role','dledu.type_role.id'])" transform='translate(7,0)' class='scene' d='M 150 255 L 307,255 Q 315,255 315,247 L 315,52 Q 315,45 322,45 L 517,45 Q 525,45 525,52 L 525,75' >
+	<title>Fk user_fk_role
+user ref type_role ( role -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 150 255 L 307,255 Q 315,255 315,247 L 315,52 Q 315,45 322,45 L 517,45 Q 525,45 525,52 L 525,75' ></path>
+<text x='157' y='250' transform='rotate(0 157,250)' title='Fk user_fk_role
+user ref type_role ( role -&gt; id )' class='relName' style='fill:#748ea7'>role</text>
+<!-- ============= Fk 'user_fk_user_address' ============= -->
+<path id='user_fk_user_address'  onmouseover="hghl(['user_fk_user_address','dledu.user.address','dledu.address.id'])" onmouseout="uhghl(['user_fk_user_address','dledu.user.address','dledu.address.id'])" transform='translate(7,0)' class='scene' d='M 150 105 L 210,105' >
+	<title>Fk fk_user_address
+user ref address ( address -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 150 105 L 210,105' ></path>
+<text x='157' y='100' transform='rotate(0 157,100)' title='Fk fk_user_address
+user ref address ( address -&gt; id )' class='relName' style='fill:#748ea7'>address</text>
+<!-- ============= Fk 'course_fk_course_img' ============= -->
+<path id='course_fk_course_img'  onmouseover="hghl(['course_fk_course_img','dledu.course.img','dledu.img.id'])" onmouseout="uhghl(['course_fk_course_img','dledu.course.img','dledu.img.id'])" transform='translate(7,0)' class='scene' d='M 270 345 L 270,337 Q 270,330 277,330 L 285,330' >
+	<title>Fk fk_course_img
+course ref img ( img -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 270 345 L 270,337 Q 270,330 277,330 L 285,330' ></path>
+<text x='272' y='340' transform='rotate(270 272,340)' title='Fk fk_course_img
+course ref img ( img -&gt; id )' class='relName' style='fill:#748ea7'>img</text>
+<!-- ============= Fk 'batch_timing_fk_batch_timing_batch_topic' ============= -->
+<path id='batch_timing_fk_batch_timing_batch_topic'  onmouseover="hghl(['batch_timing_fk_batch_timing_batch_topic','dledu.batch_timing.batch_topic','dledu.batch_topic.id'])" onmouseout="uhghl(['batch_timing_fk_batch_timing_batch_topic','dledu.batch_timing.batch_topic','dledu.batch_topic.id'])" transform='translate(7,0)' class='scene' d='M 855 495 L 645,495' >
+	<title>Fk fk_batch_timing_batch_topic
+batch_timing ref batch_topic ( batch_topic -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 855 495 L 645,495' ></path>
+<text x='806' y='490' transform='rotate(0 806,490)' title='Fk fk_batch_timing_batch_topic
+batch_timing ref batch_topic ( batch_topic -&gt; id )' class='relName' style='fill:#748ea7'>batch_topic</text>
+<!-- ============= Fk 'batch_timing_fk_batch_timing_user' ============= -->
+<path id='batch_timing_fk_batch_timing_user'  onmouseover="hghl(['batch_timing_fk_batch_timing_user','dledu.batch_timing.user','dledu.user.id'])" onmouseout="uhghl(['batch_timing_fk_batch_timing_user','dledu.batch_timing.user','dledu.user.id'])" transform='translate(7,0)' class='scene' d='M 960 420 L 967,420 Q 975,420 975,412 L 975,22 Q 975,15 967,15 L 127,15 Q 120,15 120,22 L 120,75' >
+	<title>Fk fk_batch_timing_user
+batch_timing ref user ( user -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 960 420 L 967,420 Q 975,420 975,412 L 975,22 Q 975,15 967,15 L 127,15 Q 120,15 120,22 L 120,75' ></path>
+<text x='967' y='415' transform='rotate(0 967,415)' title='Fk fk_batch_timing_user
+batch_timing ref user ( user -&gt; id )' class='relName' style='fill:#748ea7'>user</text>
+<!-- ============= Fk 'attendance_fk_attendances_user' ============= -->
+<path id='attendance_fk_attendances_user'  onmouseover="hghl(['attendance_fk_attendances_user','dledu.attendance.user','dledu.user.id'])" onmouseout="uhghl(['attendance_fk_attendances_user','dledu.attendance.user','dledu.user.id'])" transform='translate(7,0)' class='scene' d='M 660 75 L 637,75 Q 630,75 630,67 L 630,67 Q 630,60 622,60 L 142,60 Q 135,60 135,67 L 135,75' >
+	<title>Fk fk_attendances_user
+attendance ref user ( user -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 660 75 L 637,75 Q 630,75 630,67 L 630,67 Q 630,60 622,60 L 142,60 Q 135,60 135,67 L 135,75' ></path>
+<text x='646' y='70' transform='rotate(0 646,70)' title='Fk fk_attendances_user
+attendance ref user ( user -&gt; id )' class='relName' style='fill:#748ea7'>user</text>
+<!-- ============= Fk 'batch_fk_batch_course' ============= -->
+<path id='batch_fk_batch_course'  onmouseover="hghl(['batch_fk_batch_course','dledu.batch.course','dledu.course.id'])" onmouseout="uhghl(['batch_fk_batch_course','dledu.batch.course','dledu.course.id'])" transform='translate(7,0)' class='scene' d='M 585 420 L 487,420 Q 480,420 480,427 L 480,517 Q 480,525 472,525 L 277,525 Q 270,525 270,517 L 270,510' >
+	<title>Fk fk_batch_course
+batch ref course ( course -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 585 420 L 487,420 Q 480,420 480,427 L 480,517 Q 480,525 472,525 L 277,525 Q 270,525 270,517 L 270,510' ></path>
+<text x='560' y='415' transform='rotate(0 560,415)' title='Fk fk_batch_course
+batch ref course ( course -&gt; id )' class='relName' style='fill:#748ea7'>course</text>
+<!-- ============= Fk 'batch_fk_batch_branch' ============= -->
+<path id='batch_fk_batch_branch'  onmouseover="hghl(['batch_fk_batch_branch','dledu.batch.branch','dledu.branch.id'])" onmouseout="uhghl(['batch_fk_batch_branch','dledu.batch.branch','dledu.branch.id'])" transform='translate(7,0)' class='scene' d='M 585 405 L 502,405 Q 495,405 495,412 L 495,547 Q 495,555 487,555 L 142,555 Q 135,555 135,547 L 135,540' >
+	<title>Fk fk_batch_branch
+batch ref branch ( branch -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 585 405 L 502,405 Q 495,405 495,412 L 495,547 Q 495,555 487,555 L 142,555 Q 135,555 135,547 L 135,540' ></path>
+<text x='559' y='400' transform='rotate(0 559,400)' title='Fk fk_batch_branch
+batch ref branch ( branch -&gt; id )' class='relName' style='fill:#748ea7'>branch</text>
+<!-- ============= Fk 'batch_fk_batch_type_batch' ============= -->
+<path id='batch_fk_batch_type_batch'  onmouseover="hghl(['batch_fk_batch_type_batch','dledu.batch.type','dledu.type_batch.id'])" onmouseout="uhghl(['batch_fk_batch_type_batch','dledu.batch.type','dledu.type_batch.id'])" transform='translate(7,0)' class='scene' d='M 690 270 L 787,270 Q 795,270 795,262 L 795,247 Q 795,240 802,240 L 810,240' >
+	<title>Fk fk_batch_type_batch
+batch ref type_batch ( type -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 690 270 L 787,270 Q 795,270 795,262 L 795,247 Q 795,240 802,240 L 810,240' ></path>
+<text x='697' y='265' transform='rotate(0 697,265)' title='Fk fk_batch_type_batch
+batch ref type_batch ( type -&gt; id )' class='relName' style='fill:#748ea7'>type</text>
+<!-- ============= Fk 'batch_topic_fk_batch_topic_batch' ============= -->
+<path id='batch_topic_fk_batch_topic_batch'  onmouseover="hghl(['batch_topic_fk_batch_topic_batch','dledu.batch_topic.batch','dledu.batch.id'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch','dledu.batch_topic.batch','dledu.batch.id'])" transform='translate(7,0)' class='scene' d='M 615 465 L 615,450' >
+	<title>Fk fk_batch_topic_batch
+batch_topic ref batch ( batch -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 615 465 L 615,450' ></path>
+<text x='617' y='460' transform='rotate(270 617,460)' title='Fk fk_batch_topic_batch
+batch_topic ref batch ( batch -&gt; id )' class='relName' style='fill:#748ea7'>batch</text>
+<!-- ============= Fk 'batch_topic_fk_batch_topic_status_batch' ============= -->
+<path id='batch_topic_fk_batch_topic_status_batch'  onmouseover="hghl(['batch_topic_fk_batch_topic_status_batch','dledu.batch_topic.status','dledu.status_batch.id'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_status_batch','dledu.batch_topic.status','dledu.status_batch.id'])" transform='translate(7,0)' class='scene' d='M 645 510 L 727,510 Q 735,510 735,502 L 735,420' >
+	<title>Fk fk_batch_topic_status_batch
+batch_topic ref status_batch ( status -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 645 510 L 727,510 Q 735,510 735,502 L 735,420' ></path>
+<text x='652' y='505' transform='rotate(0 652,505)' title='Fk fk_batch_topic_status_batch
+batch_topic ref status_batch ( status -&gt; id )' class='relName' style='fill:#748ea7'>status</text>
+<!-- ============= Fk 'batch_topic_fk_batch_topic_batch_topic' ============= -->
+<path id='batch_topic_fk_batch_topic_batch_topic'  onmouseover="hghl(['batch_topic_fk_batch_topic_batch_topic','dledu.batch_topic.topic','dledu.topic.id'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch_topic','dledu.batch_topic.topic','dledu.topic.id'])" transform='translate(7,0)' class='scene' d='M 555 495 L 457,495 Q 450,495 450,487 L 450,480' >
+	<title>Fk fk_batch_topic_batch_topic
+batch_topic ref topic ( topic -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 555 495 L 457,495 Q 450,495 450,487 L 450,480' ></path>
+<text x='539' y='490' transform='rotate(0 539,490)' title='Fk fk_batch_topic_batch_topic
+batch_topic ref topic ( topic -&gt; id )' class='relName' style='fill:#748ea7'>topic</text>
+<!-- ============= Fk 'topic_fk_topic_course' ============= -->
+<path id='topic_fk_topic_course'  onmouseover="hghl(['topic_fk_topic_course','dledu.topic.course','dledu.course.id'])" onmouseout="uhghl(['topic_fk_topic_course','dledu.topic.course','dledu.course.id'])" transform='translate(7,0)' class='scene' d='M 345 375 L 285,375' >
+	<title>Fk fk_topic_course
+topic ref course ( course -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot1p)' marker-end='url(#arrow1)'    d='M 345 375 L 285,375' ></path>
+<text x='320' y='370' transform='rotate(0 320,370)' title='Fk fk_topic_course
+topic ref course ( course -&gt; id )' class='relName' style='fill:#748ea7'>course</text>
+<!-- ============= Fk 'batch_user_fk_batch_user_user' ============= -->
+<path id='batch_user_fk_batch_user_user'  onmouseover="hghl(['batch_user_fk_batch_user_user','dledu.batch_user.user','dledu.user.id'])" onmouseout="uhghl(['batch_user_fk_batch_user_user','dledu.batch_user.user','dledu.user.id'])" transform='translate(7,0)' class='scene' d='M 945 300 L 952,300 Q 960,300 960,292 L 960,7 Q 960,0 952,0 L 112,0 Q 105,0 105,7 L 105,75' >
+	<title>Fk fk_batch_user_user
+batch_user ref user ( user -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 945 300 L 952,300 Q 960,300 960,292 L 960,7 Q 960,0 952,0 L 112,0 Q 105,0 105,7 L 105,75' ></path>
+<text x='952' y='295' transform='rotate(0 952,295)' title='Fk fk_batch_user_user
+batch_user ref user ( user -&gt; id )' class='relName' style='fill:#748ea7'>user</text>
+<!-- ============= Fk 'batch_user_fk_batch_user_batch_user' ============= -->
+<path id='batch_user_fk_batch_user_batch_user'  onmouseover="hghl(['batch_user_fk_batch_user_batch_user','dledu.batch_user.batch','dledu.batch.id'])" onmouseout="uhghl(['batch_user_fk_batch_user_batch_user','dledu.batch_user.batch','dledu.batch.id'])" transform='translate(7,0)' class='scene' d='M 855 345 L 847,345 Q 840,345 840,352 L 840,427 Q 840,435 832,435 L 690,435' >
+	<title>Fk fk_batch_user_batch_user
+batch_user ref batch ( batch -&gt; id )</title>
+</path>
+<path transform='translate(7,0)' marker-start='url(#foot0p)' marker-end='url(#arrow1)'    d='M 855 345 L 847,345 Q 840,345 840,352 L 840,427 Q 840,435 832,435 L 690,435' ></path>
+<text x='835' y='340' transform='rotate(0 835,340)' title='Fk fk_batch_user_batch_user
+batch_user ref batch ( batch -&gt; id )' class='relName' style='fill:#748ea7'>batch</text>
+<!-- ============= Table 'menu' ============= -->
+<rect class='table' x='345' y='98' width='105' height='135' rx='7' ry='7' style='stroke:none'/>
+<path d='M 345.00 124.00 L 345.00 105.00 Q 345.00 98.00 352.00 98.00 L 443.00 98.00 Q 450.00 98.00 450.00 105.00 L 450.00 124.00 L345.00 124.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='345' y='98' width='105' height='135' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='345.000000' y1='124.000000' x2='450.000000' y2='124.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='360.000000' y1='124.000000' x2='360.000000' y2='233.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='439.000000' y1='124.000000' x2='439.000000' y2='233.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#menu'><text x='381' y='116'>menu</text><title>Table dledu.menu</title></a>
+  <use id='nn' x='347' y='132' xlink:href='#nn'/><a xlink:href='#menu.id'><use id='pk' x='347' y='131' xlink:href='#pk'/><title>Pk pk_menu ( id ) </title></a>
+<a xlink:href='#menu.id'><text id='dledu.menu.id' x='363' y='141'>id</text><title>id
+* varchar(30)</title></a>
+  <use id='nn' x='347' y='147' xlink:href='#nn'/><a xlink:href='#menu.role'><use id='idx' x='347' y='146' xlink:href='#idx'/><title>menu_fk_role ( role ) </title></a>
+<a xlink:href='#menu.role'><text id='dledu.menu.role' x='363' y='156' onmouseover="hghl(['menu_menu_fk_role'])" onmouseout="uhghl(['menu_menu_fk_role'])">role</text><title>role
+* varchar(30)</title></a>
+<a xlink:href='#menu.role'><use id='fk' x='439' y='146' xlink:href='#fk'/><title>References type_role ( role -&gt; id ) </title></a>
+  <use id='nn' x='347' y='162' xlink:href='#nn'/><a xlink:href='#menu.link'><use id='idx' x='347' y='161' xlink:href='#idx'/><title>menu_fk_link ( link ) </title></a>
+<a xlink:href='#menu.link'><text id='dledu.menu.link' x='363' y='171' onmouseover="hghl(['menu_menu_fk_link'])" onmouseout="uhghl(['menu_menu_fk_link'])">link</text><title>link
+* varchar(30)</title></a>
+<a xlink:href='#menu.link'><use id='fk' x='439' y='161' xlink:href='#fk'/><title>References link ( link -&gt; id ) </title></a>
+  <use id='nn' x='347' y='177' xlink:href='#nn'/><a xlink:href='#menu.active'><text id='dledu.menu.active' x='363' y='186'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#menu.updated_by'><text id='dledu.menu.updated_by' x='363' y='201'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='347' y='207' xlink:href='#nn'/><a xlink:href='#menu.updated_date'><text id='dledu.menu.updated_date' x='363' y='216'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'type_role' ============= -->
+<rect class='table' x='510' y='83' width='105' height='135' rx='7' ry='7' style='stroke:none'/>
+<path d='M 510.00 109.00 L 510.00 90.00 Q 510.00 83.00 517.00 83.00 L 608.00 83.00 Q 615.00 83.00 615.00 90.00 L 615.00 109.00 L510.00 109.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='510' y='83' width='105' height='135' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='510.000000' y1='109.000000' x2='615.000000' y2='109.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='525.000000' y1='109.000000' x2='525.000000' y2='218.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='604.000000' y1='109.000000' x2='604.000000' y2='218.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#type_role'><text x='536' y='101'>type_role</text><title>Table dledu.type_role</title></a>
+  <use id='nn' x='512' y='117' xlink:href='#nn'/><a xlink:href='#type_role.id'><use id='pk' x='512' y='116' xlink:href='#pk'/><title>Pk pk_type_role ( id ) </title></a>
+<a xlink:href='#type_role.id'><text id='dledu.type_role.id' x='528' y='126' onmouseover="hghl(['menu_menu_fk_role','user_user_fk_role'])" onmouseout="uhghl(['menu_menu_fk_role','user_user_fk_role'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#type_role.id'><use id='ref' x='604' y='116' xlink:href='#ref'/><title>Referred by menu ( role -&gt; id ) 
+Referred by user ( role -&gt; id ) </title></a>
+  <use id='nn' x='512' y='132' xlink:href='#nn'/><a xlink:href='#type_role.code'><use id='unq' x='512' y='131' xlink:href='#unq'/><title>Unq type_role_uq_code_name ( code, name ) </title></a>
+<a xlink:href='#type_role.code'><text id='dledu.type_role.code' x='528' y='141'>code</text><title>code
+* varchar(30)</title></a>
+  <use id='nn' x='512' y='147' xlink:href='#nn'/><a xlink:href='#type_role.name'><use id='unq' x='512' y='146' xlink:href='#unq'/><title>Unq type_role_uq_code_name ( code, name ) </title></a>
+<a xlink:href='#type_role.name'><text id='dledu.type_role.name' x='528' y='156'>name</text><title>name
+* varchar(30)</title></a>
+  <use id='nn' x='512' y='162' xlink:href='#nn'/><a xlink:href='#type_role.active'><text id='dledu.type_role.active' x='528' y='171'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#type_role.updated_by'><text id='dledu.type_role.updated_by' x='528' y='186'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='512' y='192' xlink:href='#nn'/><a xlink:href='#type_role.updated_date'><text id='dledu.type_role.updated_date' x='528' y='201'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'branch' ============= -->
+<rect class='table' x='45' y='308' width='105' height='225' rx='7' ry='7' style='stroke:none'/>
+<path d='M 45.00 334.00 L 45.00 315.00 Q 45.00 308.00 52.00 308.00 L 143.00 308.00 Q 150.00 308.00 150.00 315.00 L 150.00 334.00 L45.00 334.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='45' y='308' width='105' height='225' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='45.000000' y1='334.000000' x2='150.000000' y2='334.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='60.000000' y1='334.000000' x2='60.000000' y2='533.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='139.000000' y1='334.000000' x2='139.000000' y2='533.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#branch'><text x='78' y='326'>branch</text><title>Table dledu.branch</title></a>
+  <use id='nn' x='47' y='342' xlink:href='#nn'/><a xlink:href='#branch.id'><use id='pk' x='47' y='341' xlink:href='#pk'/><title>Pk pk_branch ( id ) </title></a>
+<a xlink:href='#branch.id'><text id='dledu.branch.id' x='63' y='351' onmouseover="hghl(['batch_fk_batch_branch','user_user_fk_branch'])" onmouseout="uhghl(['batch_fk_batch_branch','user_user_fk_branch'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#branch.id'><use id='ref' x='139' y='341' xlink:href='#ref'/><title>Referred by batch ( branch -&gt; id ) 
+Referred by user ( branch -&gt; id ) </title></a>
+  <use id='nn' x='47' y='357' xlink:href='#nn'/><a xlink:href='#branch.name'><text id='dledu.branch.name' x='63' y='366'>name</text><title>name
+* varchar(50)</title></a>
+  <use id='nn' x='47' y='372' xlink:href='#nn'/><a xlink:href='#branch.title'><text id='dledu.branch.title' x='63' y='381'>title</text><title>title
+* varchar(30)</title></a>
+  <a xlink:href='#branch.email'><text id='dledu.branch.email' x='63' y='396'>email</text><title>email
+varchar(100)</title></a>
+  <a xlink:href='#branch.mobile'><text id='dledu.branch.mobile' x='63' y='411'>mobile</text><title>mobile
+varchar(15)</title></a>
+  <a xlink:href='#branch.phone'><text id='dledu.branch.phone' x='63' y='426'>phone</text><title>phone
+varchar(15)</title></a>
+  <a xlink:href='#branch.xCord'><text id='dledu.branch.xCord' x='63' y='441'>xCord</text><title>xCord
+varchar(30)</title></a>
+  <a xlink:href='#branch.yCord'><text id='dledu.branch.yCord' x='63' y='456'>yCord</text><title>yCord
+varchar(30)</title></a>
+  <use id='nn' x='47' y='462' xlink:href='#nn'/><a xlink:href='#branch.address'><use id='idx' x='47' y='461' xlink:href='#idx'/><title>branch_fk_address ( address ) </title></a>
+<a xlink:href='#branch.address'><text id='dledu.branch.address' x='63' y='471' onmouseover="hghl(['branch_branch_fk_address'])" onmouseout="uhghl(['branch_branch_fk_address'])">address</text><title>address
+* varchar(30)</title></a>
+<a xlink:href='#branch.address'><use id='fk' x='139' y='461' xlink:href='#fk'/><title>References address ( address -&gt; id ) </title></a>
+  <use id='nn' x='47' y='477' xlink:href='#nn'/><a xlink:href='#branch.active'><text id='dledu.branch.active' x='63' y='486'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#branch.updated_by'><text id='dledu.branch.updated_by' x='63' y='501'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='47' y='507' xlink:href='#nn'/><a xlink:href='#branch.updated_date'><text id='dledu.branch.updated_date' x='63' y='516'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'user' ============= -->
+<rect class='table' x='45' y='83' width='105' height='210' rx='7' ry='7' style='stroke:none'/>
+<path d='M 45.00 109.00 L 45.00 90.00 Q 45.00 83.00 52.00 83.00 L 143.00 83.00 Q 150.00 83.00 150.00 90.00 L 150.00 109.00 L45.00 109.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='45' y='83' width='105' height='210' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='45.000000' y1='109.000000' x2='150.000000' y2='109.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='60.000000' y1='109.000000' x2='60.000000' y2='293.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='139.000000' y1='109.000000' x2='139.000000' y2='293.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#user'><text x='84' y='101'>user</text><title>Table dledu.user</title></a>
+  <use id='nn' x='47' y='117' xlink:href='#nn'/><a xlink:href='#user.id'><use id='pk' x='47' y='116' xlink:href='#pk'/><title>Pk pk_user ( id ) </title></a>
+<a xlink:href='#user.id'><text id='dledu.user.id' x='63' y='126' onmouseover="hghl(['attendance_fk_attendances_user','batch_timing_fk_batch_timing_user','batch_user_fk_batch_user_user'])" onmouseout="uhghl(['attendance_fk_attendances_user','batch_timing_fk_batch_timing_user','batch_user_fk_batch_user_user'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#user.id'><use id='ref' x='139' y='116' xlink:href='#ref'/><title>Referred by attendance ( user -&gt; id ) 
+Referred by batch_timing ( user -&gt; id ) 
+Referred by batch_user ( user -&gt; id ) </title></a>
+  <use id='nn' x='47' y='132' xlink:href='#nn'/><a xlink:href='#user.name'><text id='dledu.user.name' x='63' y='141'>name</text><title>name
+* varchar(50) default 'Anonymous'</title></a>
+  <a xlink:href='#user.email'><text id='dledu.user.email' x='63' y='156'>email</text><title>email
+varchar(100)</title></a>
+  <a xlink:href='#user.mobile'><text id='dledu.user.mobile' x='63' y='171'>mobile</text><title>mobile
+varchar(15)</title></a>
+  <use id='nn' x='47' y='177' xlink:href='#nn'/><a xlink:href='#user.password'><text id='dledu.user.password' x='63' y='186'>password</text><title>password
+* varchar(30) default '0'</title></a>
+  <use id='nn' x='47' y='192' xlink:href='#nn'/><a xlink:href='#user.role'><use id='idx' x='47' y='191' xlink:href='#idx'/><title>user_fk_role ( role ) </title></a>
+<a xlink:href='#user.role'><text id='dledu.user.role' x='63' y='201' onmouseover="hghl(['user_user_fk_role'])" onmouseout="uhghl(['user_user_fk_role'])">role</text><title>role
+* varchar(30)</title></a>
+<a xlink:href='#user.role'><use id='fk' x='139' y='191' xlink:href='#fk'/><title>References type_role ( role -&gt; id ) </title></a>
+  <use id='nn' x='47' y='207' xlink:href='#nn'/><a xlink:href='#user.address'><use id='idx' x='47' y='206' xlink:href='#idx'/><title>user_fk_address ( address ) </title></a>
+<a xlink:href='#user.address'><text id='dledu.user.address' x='63' y='216' onmouseover="hghl(['user_fk_user_address'])" onmouseout="uhghl(['user_fk_user_address'])">address</text><title>address
+* varchar(30)</title></a>
+<a xlink:href='#user.address'><use id='fk' x='139' y='206' xlink:href='#fk'/><title>References address ( address -&gt; id ) </title></a>
+  <use id='nn' x='47' y='222' xlink:href='#nn'/><a xlink:href='#user.branch'><use id='idx' x='47' y='221' xlink:href='#idx'/><title>user_fk_branch ( branch ) </title></a>
+<a xlink:href='#user.branch'><text id='dledu.user.branch' x='63' y='231' onmouseover="hghl(['user_user_fk_branch'])" onmouseout="uhghl(['user_user_fk_branch'])">branch</text><title>branch
+* varchar(30)</title></a>
+<a xlink:href='#user.branch'><use id='fk' x='139' y='221' xlink:href='#fk'/><title>References branch ( branch -&gt; id ) </title></a>
+  <use id='nn' x='47' y='237' xlink:href='#nn'/><a xlink:href='#user.active'><text id='dledu.user.active' x='63' y='246'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#user.updated_by'><text id='dledu.user.updated_by' x='63' y='261'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='47' y='267' xlink:href='#nn'/><a xlink:href='#user.updated_date'><text id='dledu.user.updated_date' x='63' y='276'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'address' ============= -->
+<rect class='table' x='225' y='83' width='75' height='150' rx='7' ry='7' style='stroke:none'/>
+<path d='M 225.00 109.00 L 225.00 90.00 Q 225.00 83.00 232.00 83.00 L 293.00 83.00 Q 300.00 83.00 300.00 90.00 L 300.00 109.00 L225.00 109.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='225' y='83' width='75' height='150' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='225.000000' y1='109.000000' x2='300.000000' y2='109.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='240.000000' y1='109.000000' x2='240.000000' y2='233.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='289.000000' y1='109.000000' x2='289.000000' y2='233.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#address'><text x='240' y='101'>address</text><title>Table dledu.address</title></a>
+  <use id='nn' x='227' y='117' xlink:href='#nn'/><a xlink:href='#address.id'><use id='pk' x='227' y='116' xlink:href='#pk'/><title>Pk pk_address ( id ) </title></a>
+<a xlink:href='#address.id'><text id='dledu.address.id' x='243' y='126' onmouseover="hghl(['branch_branch_fk_address','user_fk_user_address'])" onmouseout="uhghl(['branch_branch_fk_address','user_fk_user_address'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#address.id'><use id='ref' x='289' y='116' xlink:href='#ref'/><title>Referred by branch ( address -&gt; id ) 
+Referred by user ( address -&gt; id ) </title></a>
+  <a xlink:href='#address.lane'><text id='dledu.address.lane' x='243' y='141'>lane</text><title>lane
+varchar(30)</title></a>
+  <a xlink:href='#address.street'><text id='dledu.address.street' x='243' y='156'>street</text><title>street
+varchar(30)</title></a>
+  <a xlink:href='#address.city'><text id='dledu.address.city' x='243' y='171'>city</text><title>city
+varchar(30)</title></a>
+  <a xlink:href='#address.state'><text id='dledu.address.state' x='243' y='186'>state</text><title>state
+varchar(30)</title></a>
+  <a xlink:href='#address.country'><text id='dledu.address.country' x='243' y='201'>country</text><title>country
+varchar(30) default 'INDIA'</title></a>
+  <a xlink:href='#address.zipcode'><text id='dledu.address.zipcode' x='243' y='216'>zipcode</text><title>zipcode
+int</title></a>
+
+<!-- ============= Table 'type_batch' ============= -->
+<rect class='table' x='825' y='143' width='105' height='120' rx='7' ry='7' style='stroke:none'/>
+<path d='M 825.00 169.00 L 825.00 150.00 Q 825.00 143.00 832.00 143.00 L 923.00 143.00 Q 930.00 143.00 930.00 150.00 L 930.00 169.00 L825.00 169.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='825' y='143' width='105' height='120' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='825.000000' y1='169.000000' x2='930.000000' y2='169.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='840.000000' y1='169.000000' x2='840.000000' y2='263.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='919.000000' y1='169.000000' x2='919.000000' y2='263.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#type_batch'><text x='847' y='161'>type_batch</text><title>Table dledu.type_batch</title></a>
+  <use id='nn' x='827' y='177' xlink:href='#nn'/><a xlink:href='#type_batch.id'><use id='pk' x='827' y='176' xlink:href='#pk'/><title>Pk pk_type_batch ( id ) </title></a>
+<a xlink:href='#type_batch.id'><text id='dledu.type_batch.id' x='843' y='186' onmouseover="hghl(['batch_fk_batch_type_batch'])" onmouseout="uhghl(['batch_fk_batch_type_batch'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#type_batch.id'><use id='ref' x='919' y='176' xlink:href='#ref'/><title>Referred by batch ( type -&gt; id ) </title></a>
+  <a xlink:href='#type_batch.name'><text id='dledu.type_batch.name' x='843' y='201'>name</text><title>name
+varchar(100)</title></a>
+  <a xlink:href='#type_batch.active'><text id='dledu.type_batch.active' x='843' y='216'>active</text><title>active
+varchar(50)</title></a>
+  <a xlink:href='#type_batch.updated_by'><text id='dledu.type_batch.updated_by' x='843' y='231'>updated_by</text><title>updated_by
+varchar(50)</title></a>
+  <a xlink:href='#type_batch.updated_date'><text id='dledu.type_batch.updated_date' x='843' y='246'>updated_date</text><title>updated_date
+date</title></a>
+
+<!-- ============= Table 'course' ============= -->
+<rect class='table' x='180' y='353' width='105' height='150' rx='7' ry='7' style='stroke:none'/>
+<path d='M 180.00 379.00 L 180.00 360.00 Q 180.00 353.00 187.00 353.00 L 278.00 353.00 Q 285.00 353.00 285.00 360.00 L 285.00 379.00 L180.00 379.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='180' y='353' width='105' height='150' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='180.000000' y1='379.000000' x2='285.000000' y2='379.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='195.000000' y1='379.000000' x2='195.000000' y2='503.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='274.000000' y1='379.000000' x2='274.000000' y2='503.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#course'><text x='213' y='371'>course</text><title>Table dledu.course</title></a>
+  <use id='nn' x='182' y='387' xlink:href='#nn'/><a xlink:href='#course.id'><use id='pk' x='182' y='386' xlink:href='#pk'/><title>Pk pk_course_0 ( id ) </title></a>
+<a xlink:href='#course.id'><text id='dledu.course.id' x='198' y='396' onmouseover="hghl(['batch_fk_batch_course','topic_fk_topic_course'])" onmouseout="uhghl(['batch_fk_batch_course','topic_fk_topic_course'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#course.id'><use id='ref' x='274' y='386' xlink:href='#ref'/><title>Referred by batch ( course -&gt; id ) 
+Referred by topic ( course -&gt; id ) </title></a>
+  <use id='nn' x='182' y='402' xlink:href='#nn'/><a xlink:href='#course.name'><text id='dledu.course.name' x='198' y='411'>name</text><title>name
+* varchar(50)</title></a>
+  <use id='nn' x='182' y='417' xlink:href='#nn'/><a xlink:href='#course.des'><text id='dledu.course.des' x='198' y='426'>des</text><title>des
+* varchar(100)</title></a>
+  <a xlink:href='#course.img'><use id='idx' x='182' y='431' xlink:href='#idx'/><title>course_fk_img_0 ( img ) </title></a>
+<a xlink:href='#course.img'><text id='dledu.course.img' x='198' y='441' onmouseover="hghl(['course_fk_course_img'])" onmouseout="uhghl(['course_fk_course_img'])">img</text><title>img
+varchar(30)</title></a>
+<a xlink:href='#course.img'><use id='fk' x='274' y='431' xlink:href='#fk'/><title>References img ( img -&gt; id ) </title></a>
+  <use id='nn' x='182' y='447' xlink:href='#nn'/><a xlink:href='#course.active'><text id='dledu.course.active' x='198' y='456'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#course.updated_by'><text id='dledu.course.updated_by' x='198' y='471'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='182' y='477' xlink:href='#nn'/><a xlink:href='#course.updated_date'><text id='dledu.course.updated_date' x='198' y='486'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'img' ============= -->
+<rect class='table' x='300' y='278' width='45' height='75' rx='7' ry='7' style='stroke:none'/>
+<path d='M 300.00 304.00 L 300.00 285.00 Q 300.00 278.00 307.00 278.00 L 338.00 278.00 Q 345.00 278.00 345.00 285.00 L 345.00 304.00 L300.00 304.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='300' y='278' width='45' height='75' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='300.000000' y1='304.000000' x2='345.000000' y2='304.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='315.000000' y1='304.000000' x2='315.000000' y2='353.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='334.000000' y1='304.000000' x2='334.000000' y2='353.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#img'><text x='311' y='296'>img</text><title>Table dledu.img</title></a>
+  <use id='nn' x='302' y='312' xlink:href='#nn'/><a xlink:href='#img.id'><use id='pk' x='302' y='311' xlink:href='#pk'/><title>Pk pk_img_0 ( id ) </title></a>
+<a xlink:href='#img.id'><text id='dledu.img.id' x='318' y='321' onmouseover="hghl(['course_fk_course_img'])" onmouseout="uhghl(['course_fk_course_img'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#img.id'><use id='ref' x='334' y='311' xlink:href='#ref'/><title>Referred by course ( img -&gt; id ) </title></a>
+  <a xlink:href='#img.src'><text id='dledu.img.src' x='318' y='336'>src</text><title>src
+longtext</title></a>
+
+<!-- ============= Table 'link' ============= -->
+<rect class='table' x='495' y='263' width='75' height='120' rx='7' ry='7' style='stroke:none'/>
+<path d='M 495.00 289.00 L 495.00 270.00 Q 495.00 263.00 502.00 263.00 L 563.00 263.00 Q 570.00 263.00 570.00 270.00 L 570.00 289.00 L495.00 289.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='495' y='263' width='75' height='120' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='495.000000' y1='289.000000' x2='570.000000' y2='289.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='510.000000' y1='289.000000' x2='510.000000' y2='383.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='559.000000' y1='289.000000' x2='559.000000' y2='383.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#link'><text x='522' y='281'>link</text><title>Table dledu.link</title></a>
+  <use id='nn' x='497' y='297' xlink:href='#nn'/><a xlink:href='#link.id'><use id='pk' x='497' y='296' xlink:href='#pk'/><title>Pk pk_link ( id ) </title></a>
+<a xlink:href='#link.id'><text id='dledu.link.id' x='513' y='306' onmouseover="hghl(['menu_menu_fk_link'])" onmouseout="uhghl(['menu_menu_fk_link'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#link.id'><use id='ref' x='559' y='296' xlink:href='#ref'/><title>Referred by menu ( link -&gt; id ) </title></a>
+  <use id='nn' x='497' y='312' xlink:href='#nn'/><a xlink:href='#link.name'><text id='dledu.link.name' x='513' y='321'>name</text><title>name
+* varchar(30)</title></a>
+  <use id='nn' x='497' y='327' xlink:href='#nn'/><a xlink:href='#link.url'><text id='dledu.link.url' x='513' y='336'>url</text><title>url
+* varchar(100)</title></a>
+  <use id='nn' x='497' y='342' xlink:href='#nn'/><a xlink:href='#link.icon'><text id='dledu.link.icon' x='513' y='351'>icon</text><title>icon
+* varchar(30)</title></a>
+  <use id='nn' x='497' y='357' xlink:href='#nn'/><a xlink:href='#link.priority'><text id='dledu.link.priority' x='513' y='366'>priority</text><title>priority
+* int default 999</title></a>
+
+<!-- ============= Table 'status_batch' ============= -->
+<rect class='table' x='720' y='293' width='105' height='120' rx='7' ry='7' style='stroke:none'/>
+<path d='M 720.00 319.00 L 720.00 300.00 Q 720.00 293.00 727.00 293.00 L 818.00 293.00 Q 825.00 293.00 825.00 300.00 L 825.00 319.00 L720.00 319.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='720' y='293' width='105' height='120' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='720.000000' y1='319.000000' x2='825.000000' y2='319.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='735.000000' y1='319.000000' x2='735.000000' y2='413.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='814.000000' y1='319.000000' x2='814.000000' y2='413.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#status_batch'><text x='738' y='311'>status_batch</text><title>Table dledu.status_batch</title></a>
+  <use id='nn' x='722' y='327' xlink:href='#nn'/><a xlink:href='#status_batch.id'><use id='pk' x='722' y='326' xlink:href='#pk'/><title>Pk pk_type_batch_0 ( id ) </title></a>
+<a xlink:href='#status_batch.id'><text id='dledu.status_batch.id' x='738' y='336' onmouseover="hghl(['batch_topic_fk_batch_topic_status_batch'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_status_batch'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#status_batch.id'><use id='ref' x='814' y='326' xlink:href='#ref'/><title>Referred by batch_topic ( status -&gt; id ) </title></a>
+  <a xlink:href='#status_batch.name'><text id='dledu.status_batch.name' x='738' y='351'>name</text><title>name
+varchar(100)</title></a>
+  <a xlink:href='#status_batch.active'><text id='dledu.status_batch.active' x='738' y='366'>active</text><title>active
+varchar(50)</title></a>
+  <a xlink:href='#status_batch.updated_by'><text id='dledu.status_batch.updated_by' x='738' y='381'>updated_by</text><title>updated_by
+varchar(50)</title></a>
+  <a xlink:href='#status_batch.updated_date'><text id='dledu.status_batch.updated_date' x='738' y='396'>updated_date</text><title>updated_date
+date</title></a>
+
+<!-- ============= Table 'batch_timing' ============= -->
+<rect class='table' x='870' y='398' width='90' height='135' rx='7' ry='7' style='stroke:none'/>
+<path d='M 870.00 424.00 L 870.00 405.00 Q 870.00 398.00 877.00 398.00 L 953.00 398.00 Q 960.00 398.00 960.00 405.00 L 960.00 424.00 L870.00 424.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='870' y='398' width='90' height='135' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='870.000000' y1='424.000000' x2='960.000000' y2='424.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='885.000000' y1='424.000000' x2='885.000000' y2='533.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='949.000000' y1='424.000000' x2='949.000000' y2='533.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#batch_timing'><text x='881' y='416'>batch_timing</text><title>Table dledu.batch_timing</title></a>
+  <use id='nn' x='872' y='432' xlink:href='#nn'/><a xlink:href='#batch_timing.id'><use id='pk' x='872' y='431' xlink:href='#pk'/><title>Pk pk_batch_timing ( id ) </title></a>
+<a xlink:href='#batch_timing.id'><text id='dledu.batch_timing.id' x='888' y='441'>id</text><title>id
+* varchar(30)</title></a>
+  <a xlink:href='#batch_timing.batch_topic'><use id='idx' x='872' y='446' xlink:href='#idx'/><title>idx_batch_timing ( batch_topic ) </title></a>
+<a xlink:href='#batch_timing.batch_topic'><text id='dledu.batch_timing.batch_topic' x='888' y='456' onmouseover="hghl(['batch_timing_fk_batch_timing_batch_topic'])" onmouseout="uhghl(['batch_timing_fk_batch_timing_batch_topic'])">batch_topic</text><title>batch_topic
+varchar(50)</title></a>
+<a xlink:href='#batch_timing.batch_topic'><use id='fk' x='949' y='446' xlink:href='#fk'/><title>References batch_topic ( batch_topic -&gt; id ) </title></a>
+  <a xlink:href='#batch_timing.from_time'><text id='dledu.batch_timing.from_time' x='888' y='471'>from_time</text><title>from_time
+varchar(50)</title></a>
+  <a xlink:href='#batch_timing.to_time'><text id='dledu.batch_timing.to_time' x='888' y='486'>to_time</text><title>to_time
+varchar(50)</title></a>
+  <a xlink:href='#batch_timing.hrs'><text id='dledu.batch_timing.hrs' x='888' y='501'>hrs</text><title>hrs
+varchar(50)</title></a>
+  <a xlink:href='#batch_timing.user'><use id='idx' x='872' y='506' xlink:href='#idx'/><title>idx_batch_timing ( user ) </title></a>
+<a xlink:href='#batch_timing.user'><text id='dledu.batch_timing.user' x='888' y='516' onmouseover="hghl(['batch_timing_fk_batch_timing_user'])" onmouseout="uhghl(['batch_timing_fk_batch_timing_user'])">user</text><title>user
+varchar(50)</title></a>
+<a xlink:href='#batch_timing.user'><use id='fk' x='949' y='506' xlink:href='#fk'/><title>References user ( user -&gt; id ) </title></a>
+
+<!-- ============= Table 'attendance' ============= -->
+<rect class='table' x='675' y='68' width='90' height='105' rx='7' ry='7' style='stroke:none'/>
+<path d='M 675.00 94.00 L 675.00 75.00 Q 675.00 68.00 682.00 68.00 L 758.00 68.00 Q 765.00 68.00 765.00 75.00 L 765.00 94.00 L675.00 94.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='675' y='68' width='90' height='105' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='675.000000' y1='94.000000' x2='765.000000' y2='94.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='690.000000' y1='94.000000' x2='690.000000' y2='173.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='754.000000' y1='94.000000' x2='754.000000' y2='173.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#attendance'><text x='689' y='86'>attendance</text><title>Table dledu.attendance</title></a>
+  <use id='nn' x='677' y='102' xlink:href='#nn'/><a xlink:href='#attendance.id'><use id='pk' x='677' y='101' xlink:href='#pk'/><title>Pk pk_attendances ( id ) </title></a>
+<a xlink:href='#attendance.id'><text id='dledu.attendance.id' x='693' y='111'>id</text><title>id
+* varchar(30)</title></a>
+  <a xlink:href='#attendance.from_time'><text id='dledu.attendance.from_time' x='693' y='126'>from_time</text><title>from_time
+varchar(50)</title></a>
+  <a xlink:href='#attendance.to_time'><text id='dledu.attendance.to_time' x='693' y='141'>to_time</text><title>to_time
+varchar(50)</title></a>
+  <a xlink:href='#attendance.user'><use id='idx' x='677' y='146' xlink:href='#idx'/><title>idx_attendances ( user ) </title></a>
+<a xlink:href='#attendance.user'><text id='dledu.attendance.user' x='693' y='156' onmouseover="hghl(['attendance_fk_attendances_user'])" onmouseout="uhghl(['attendance_fk_attendances_user'])">user</text><title>user
+varchar(30)</title></a>
+<a xlink:href='#attendance.user'><use id='fk' x='754' y='146' xlink:href='#fk'/><title>References user ( user -&gt; id ) </title></a>
+
+<!-- ============= Table 'batch' ============= -->
+<rect class='table' x='600' y='248' width='90' height='195' rx='7' ry='7' style='stroke:none'/>
+<path d='M 600.00 274.00 L 600.00 255.00 Q 600.00 248.00 607.00 248.00 L 683.00 248.00 Q 690.00 248.00 690.00 255.00 L 690.00 274.00 L600.00 274.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='600' y='248' width='90' height='195' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='600.000000' y1='274.000000' x2='690.000000' y2='274.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='615.000000' y1='274.000000' x2='615.000000' y2='443.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='679.000000' y1='274.000000' x2='679.000000' y2='443.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#batch'><text x='628' y='266'>batch</text><title>Table dledu.batch</title></a>
+  <use id='nn' x='602' y='282' xlink:href='#nn'/><a xlink:href='#batch.id'><use id='pk' x='602' y='281' xlink:href='#pk'/><title>Pk pk_batch ( id ) </title></a>
+<a xlink:href='#batch.id'><text id='dledu.batch.id' x='618' y='291' onmouseover="hghl(['batch_topic_fk_batch_topic_batch','batch_user_fk_batch_user_batch_user'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch','batch_user_fk_batch_user_batch_user'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#batch.id'><use id='ref' x='679' y='281' xlink:href='#ref'/><title>Referred by batch_topic ( batch -&gt; id ) 
+Referred by batch_user ( batch -&gt; id ) </title></a>
+  <a xlink:href='#batch.name'><text id='dledu.batch.name' x='618' y='306'>name</text><title>name
+varchar(50)</title></a>
+  <a xlink:href='#batch.type'><use id='idx' x='602' y='311' xlink:href='#idx'/><title>idx_batch_1 ( type ) </title></a>
+<a xlink:href='#batch.type'><text id='dledu.batch.type' x='618' y='321' onmouseover="hghl(['batch_fk_batch_type_batch'])" onmouseout="uhghl(['batch_fk_batch_type_batch'])">type</text><title>type
+varchar(50)</title></a>
+<a xlink:href='#batch.type'><use id='fk' x='679' y='311' xlink:href='#fk'/><title>References type_batch ( type -&gt; id ) </title></a>
+  <a xlink:href='#batch.course'><use id='idx' x='602' y='326' xlink:href='#idx'/><title>idx_batch ( course ) </title></a>
+<a xlink:href='#batch.course'><text id='dledu.batch.course' x='618' y='336' onmouseover="hghl(['batch_fk_batch_course'])" onmouseout="uhghl(['batch_fk_batch_course'])">course</text><title>course
+varchar(50)</title></a>
+<a xlink:href='#batch.course'><use id='fk' x='679' y='326' xlink:href='#fk'/><title>References course ( course -&gt; id ) </title></a>
+  <a xlink:href='#batch.from_date'><text id='dledu.batch.from_date' x='618' y='351'>from_date</text><title>from_date
+varchar(50)</title></a>
+  <a xlink:href='#batch.to_date'><text id='dledu.batch.to_date' x='618' y='366'>to_date</text><title>to_date
+varchar(50)</title></a>
+  <a xlink:href='#batch.from_time'><text id='dledu.batch.from_time' x='618' y='381'>from_time</text><title>from_time
+varchar(50)</title></a>
+  <a xlink:href='#batch.to_time'><text id='dledu.batch.to_time' x='618' y='396'>to_time</text><title>to_time
+varchar(50)</title></a>
+  <a xlink:href='#batch.des'><text id='dledu.batch.des' x='618' y='411'>des</text><title>des
+varchar(100)</title></a>
+  <a xlink:href='#batch.branch'><use id='idx' x='602' y='416' xlink:href='#idx'/><title>idx_batch_0 ( branch ) </title></a>
+<a xlink:href='#batch.branch'><text id='dledu.batch.branch' x='618' y='426' onmouseover="hghl(['batch_fk_batch_branch'])" onmouseout="uhghl(['batch_fk_batch_branch'])">branch</text><title>branch
+varchar(50)</title></a>
+<a xlink:href='#batch.branch'><use id='fk' x='679' y='416' xlink:href='#fk'/><title>References branch ( branch -&gt; id ) </title></a>
+
+<!-- ============= Table 'batch_topic' ============= -->
+<rect class='table' x='570' y='473' width='75' height='105' rx='7' ry='7' style='stroke:none'/>
+<path d='M 570.00 499.00 L 570.00 480.00 Q 570.00 473.00 577.00 473.00 L 638.00 473.00 Q 645.00 473.00 645.00 480.00 L 645.00 499.00 L570.00 499.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='570' y='473' width='75' height='105' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='570.000000' y1='499.000000' x2='645.000000' y2='499.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='585.000000' y1='499.000000' x2='585.000000' y2='578.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='634.000000' y1='499.000000' x2='634.000000' y2='578.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#batch_topic'><text x='576' y='491'>batch_topic</text><title>Table dledu.batch_topic</title></a>
+  <use id='nn' x='572' y='507' xlink:href='#nn'/><a xlink:href='#batch_topic.id'><use id='pk' x='572' y='506' xlink:href='#pk'/><title>Pk pk_batch_topic ( id ) </title></a>
+<a xlink:href='#batch_topic.id'><text id='dledu.batch_topic.id' x='588' y='516' onmouseover="hghl(['batch_timing_fk_batch_timing_batch_topic'])" onmouseout="uhghl(['batch_timing_fk_batch_timing_batch_topic'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#batch_topic.id'><use id='ref' x='634' y='506' xlink:href='#ref'/><title>Referred by batch_timing ( batch_topic -&gt; id ) </title></a>
+  <a xlink:href='#batch_topic.batch'><use id='idx' x='572' y='521' xlink:href='#idx'/><title>idx_batch_topic ( batch ) </title></a>
+<a xlink:href='#batch_topic.batch'><text id='dledu.batch_topic.batch' x='588' y='531' onmouseover="hghl(['batch_topic_fk_batch_topic_batch'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch'])">batch</text><title>batch
+varchar(50)</title></a>
+<a xlink:href='#batch_topic.batch'><use id='fk' x='634' y='521' xlink:href='#fk'/><title>References batch ( batch -&gt; id ) </title></a>
+  <a xlink:href='#batch_topic.status'><use id='idx' x='572' y='536' xlink:href='#idx'/><title>idx_batch_topic ( status ) </title></a>
+<a xlink:href='#batch_topic.status'><text id='dledu.batch_topic.status' x='588' y='546' onmouseover="hghl(['batch_topic_fk_batch_topic_status_batch'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_status_batch'])">status</text><title>status
+varchar(50)</title></a>
+<a xlink:href='#batch_topic.status'><use id='fk' x='634' y='536' xlink:href='#fk'/><title>References status_batch ( status -&gt; id ) </title></a>
+  <a xlink:href='#batch_topic.topic'><use id='idx' x='572' y='551' xlink:href='#idx'/><title>idx_batch_topic_0 ( topic ) </title></a>
+<a xlink:href='#batch_topic.topic'><text id='dledu.batch_topic.topic' x='588' y='561' onmouseover="hghl(['batch_topic_fk_batch_topic_batch_topic'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch_topic'])">topic</text><title>topic
+varchar(50)</title></a>
+<a xlink:href='#batch_topic.topic'><use id='fk' x='634' y='551' xlink:href='#fk'/><title>References topic ( topic -&gt; id ) </title></a>
+
+<!-- ============= Table 'topic' ============= -->
+<rect class='table' x='360' y='293' width='105' height='180' rx='7' ry='7' style='stroke:none'/>
+<path d='M 360.00 319.00 L 360.00 300.00 Q 360.00 293.00 367.00 293.00 L 458.00 293.00 Q 465.00 293.00 465.00 300.00 L 465.00 319.00 L360.00 319.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='360' y='293' width='105' height='180' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='360.000000' y1='319.000000' x2='465.000000' y2='319.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='375.000000' y1='319.000000' x2='375.000000' y2='473.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='454.000000' y1='319.000000' x2='454.000000' y2='473.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#topic'><text x='398' y='311'>topic</text><title>Table dledu.topic</title></a>
+  <use id='nn' x='362' y='327' xlink:href='#nn'/><a xlink:href='#topic.id'><use id='pk' x='362' y='326' xlink:href='#pk'/><title>Pk pk_topic_0 ( id ) </title></a>
+<a xlink:href='#topic.id'><text id='dledu.topic.id' x='378' y='336' onmouseover="hghl(['batch_topic_fk_batch_topic_batch_topic'])" onmouseout="uhghl(['batch_topic_fk_batch_topic_batch_topic'])">id</text><title>id
+* varchar(30)</title></a>
+<a xlink:href='#topic.id'><use id='ref' x='454' y='326' xlink:href='#ref'/><title>Referred by batch_topic ( topic -&gt; id ) </title></a>
+  <use id='nn' x='362' y='342' xlink:href='#nn'/><a xlink:href='#topic.name'><text id='dledu.topic.name' x='378' y='351'>name</text><title>name
+* varchar(50)</title></a>
+  <use id='nn' x='362' y='357' xlink:href='#nn'/><a xlink:href='#topic.des'><text id='dledu.topic.des' x='378' y='366'>des</text><title>des
+* varchar(100)</title></a>
+  <use id='nn' x='362' y='372' xlink:href='#nn'/><a xlink:href='#topic.priority'><text id='dledu.topic.priority' x='378' y='381'>priority</text><title>priority
+* int default 999</title></a>
+  <use id='nn' x='362' y='387' xlink:href='#nn'/><a xlink:href='#topic.course'><use id='idx' x='362' y='386' xlink:href='#idx'/><title>topic_fk_course_0 ( course ) </title></a>
+<a xlink:href='#topic.course'><text id='dledu.topic.course' x='378' y='396' onmouseover="hghl(['topic_fk_topic_course'])" onmouseout="uhghl(['topic_fk_topic_course'])">course</text><title>course
+* varchar(30)</title></a>
+<a xlink:href='#topic.course'><use id='fk' x='454' y='386' xlink:href='#fk'/><title>References course ( course -&gt; id ) </title></a>
+  <a xlink:href='#topic.parent_topic'><text id='dledu.topic.parent_topic' x='378' y='411'>parent_topic</text><title>parent_topic
+varchar(30)</title></a>
+  <use id='nn' x='362' y='417' xlink:href='#nn'/><a xlink:href='#topic.active'><text id='dledu.topic.active' x='378' y='426'>active</text><title>active
+* bit default 1</title></a>
+  <a xlink:href='#topic.updated_by'><text id='dledu.topic.updated_by' x='378' y='441'>updated_by</text><title>updated_by
+varchar(30) default 'system'</title></a>
+  <use id='nn' x='362' y='447' xlink:href='#nn'/><a xlink:href='#topic.updated_date'><text id='dledu.topic.updated_date' x='378' y='456'>updated_date</text><title>updated_date
+* timestamp default CURRENT_TIMESTAMP</title></a>
+
+<!-- ============= Table 'batch_user' ============= -->
+<rect class='table' x='870' y='278' width='75' height='90' rx='7' ry='7' style='stroke:none'/>
+<path d='M 870.00 304.00 L 870.00 285.00 Q 870.00 278.00 877.00 278.00 L 938.00 278.00 Q 945.00 278.00 945.00 285.00 L 945.00 304.00 L870.00 304.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='870' y='278' width='75' height='90' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='870.000000' y1='304.000000' x2='945.000000' y2='304.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='885.000000' y1='304.000000' x2='885.000000' y2='368.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='934.000000' y1='304.000000' x2='934.000000' y2='368.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#batch_user'><text x='877' y='296'>batch_user</text><title>Table dledu.batch_user</title></a>
+  <use id='nn' x='872' y='312' xlink:href='#nn'/><a xlink:href='#batch_user.id'><use id='pk' x='872' y='311' xlink:href='#pk'/><title>Pk pk_batch_user ( id ) </title></a>
+<a xlink:href='#batch_user.id'><text id='dledu.batch_user.id' x='888' y='321'>id</text><title>id
+* varchar(30)</title></a>
+  <a xlink:href='#batch_user.user'><use id='idx' x='872' y='326' xlink:href='#idx'/><title>idx_batch_user ( user ) </title></a>
+<a xlink:href='#batch_user.user'><text id='dledu.batch_user.user' x='888' y='336' onmouseover="hghl(['batch_user_fk_batch_user_user'])" onmouseout="uhghl(['batch_user_fk_batch_user_user'])">user</text><title>user
+varchar(50)</title></a>
+<a xlink:href='#batch_user.user'><use id='fk' x='934' y='326' xlink:href='#fk'/><title>References user ( user -&gt; id ) </title></a>
+  <a xlink:href='#batch_user.batch'><text id='dledu.batch_user.batch' x='888' y='351' onmouseover="hghl(['batch_user_fk_batch_user_batch_user'])" onmouseout="uhghl(['batch_user_fk_batch_user_batch_user'])">batch</text><title>batch
+varchar(50)</title></a>
+<a xlink:href='#batch_user.batch'><use id='fk' x='934' y='341' xlink:href='#fk'/><title>References batch ( batch -&gt; id ) </title></a>
+
+<!-- ============= Table 'timing' ============= -->
+<rect class='table' x='825' y='38' width='60' height='90' rx='7' ry='7' style='stroke:none'/>
+<path d='M 825.00 64.00 L 825.00 45.00 Q 825.00 38.00 832.00 38.00 L 878.00 38.00 Q 885.00 38.00 885.00 45.00 L 885.00 64.00 L825.00 64.00 ' style='fill:url(#tbg_c1d8ee);stroke:1;stroke-opacity:0.1;' />
+<rect class='table' x='825' y='38' width='60' height='90' rx='7' ry='7' style='fill:none;stroke:#aeb7bf'/>
+<line class='delim' x1='825.000000' y1='64.000000' x2='885.000000' y2='64.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='840.000000' y1='64.000000' x2='840.000000' y2='128.000000' style='stroke:#aeb7bf'/>
+<line class='delim' x1='874.000000' y1='64.000000' x2='874.000000' y2='128.000000' style='stroke:#aeb7bf'/>
+<a xlink:href='#timing'><text x='838' y='56'>timing</text><title>Table dledu.timing</title></a>
+  <use id='nn' x='827' y='72' xlink:href='#nn'/><a xlink:href='#timing.id'><use id='pk' x='827' y='71' xlink:href='#pk'/><title>Pk pk_timing ( id ) </title></a>
+<a xlink:href='#timing.id'><text id='dledu.timing.id' x='843' y='81'>id</text><title>id
+* varchar(30)</title></a>
+  <a xlink:href='#timing.name'><text id='dledu.timing.name' x='843' y='96'>name</text><title>name
+varchar(30)</title></a>
+  <a xlink:href='#timing.code'><text id='dledu.timing.code' x='843' y='111'>code</text><title>code
+varchar(30)</title></a>
+
+</g></svg></div>
+
+
+<br/><br/>
+<div class='section-header'><a name='menu' onclick='window.scrollTo(145, 105);return false;' style='cursor:pointer;'><h2>Table menu</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg></td>
+		<td><a name='menu.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='menu.role'>role</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='menu.link'>link</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='menu.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='menu.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='menu.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;menu</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>menu&#95;fk&#95;link</td>
+		<td> ON link</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>menu&#95;fk&#95;role</td>
+		<td> ON role</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>menu_fk_link</td>
+		<td > ( link ) ref <a href='#link'>link</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>menu_fk_role</td>
+		<td > ( role ) ref <a href='#type&#95;role'>type&#95;role</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='type_role' onclick='window.scrollTo(310, 90);return false;' style='cursor:pointer;'><h2>Table type_role</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='type_role.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#unq'/></svg></td>
+		<td><a name='type_role.code'>code</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#unq'/></svg></td>
+		<td><a name='type_role.name'>name</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='type_role.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='type_role.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='type_role.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;type&#95;role</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#unq'/></svg></td><td>type&#95;role&#95;uq&#95;code&#95;name</td>
+		<td> ON code&#44; name</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='branch' onclick='window.scrollTo(60, 315);return false;' style='cursor:pointer;'><h2>Table branch</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='branch.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='branch.name'>name</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='branch.title'>title</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.email'>email</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.mobile'>mobile</a></td>
+		<td> varchar&#40; 15 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.phone'>phone</a></td>
+		<td> varchar&#40; 15 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.xCord'>xCord</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.yCord'>yCord</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='branch.address'>address</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='branch.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='branch.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='branch.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;branch</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>branch&#95;fk&#95;address</td>
+		<td> ON address</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>branch_fk_address</td>
+		<td > ( address ) ref <a href='#address'>address</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='user' onclick='window.scrollTo(60, 90);return false;' style='cursor:pointer;'><h2>Table user</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='user.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='user.name'>name</a></td>
+		<td> varchar&#40; 50 &#41;   DEFAULT 'Anonymous' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='user.email'>email</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='user.mobile'>mobile</a></td>
+		<td> varchar&#40; 15 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='user.password'>password</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT '0' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='user.role'>role</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='user.address'>address</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='user.branch'>branch</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='user.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='user.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='user.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;user</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>user&#95;fk&#95;address</td>
+		<td> ON address</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>user&#95;fk&#95;branch</td>
+		<td> ON branch</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>user&#95;fk&#95;role</td>
+		<td> ON role</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>user_fk_branch</td>
+		<td > ( branch ) ref <a href='#branch'>branch</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>user_fk_role</td>
+		<td > ( role ) ref <a href='#type&#95;role'>type&#95;role</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_user_address</td>
+		<td > ( address ) ref <a href='#address'>address</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='address' onclick='window.scrollTo(60, 90);return false;' style='cursor:pointer;'><h2>Table address</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='address.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.lane'>lane</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.street'>street</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.city'>city</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.state'>state</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.country'>country</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'INDIA' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='address.zipcode'>zipcode</a></td>
+		<td> int   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;address</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='type_batch' onclick='window.scrollTo(625, 150);return false;' style='cursor:pointer;'><h2>Table type_batch</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='type_batch.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='type_batch.name'>name</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='type_batch.active'>active</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='type_batch.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='type_batch.updated_date'>updated&#95;date</a></td>
+		<td> date   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;type&#95;batch</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='course' onclick='window.scrollTo(60, 360);return false;' style='cursor:pointer;'><h2>Table course</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='course.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='course.name'>name</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='course.des'>des</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='course.img'>img</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='course.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='course.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='course.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;course&#95;0</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>course&#95;fk&#95;img&#95;0</td>
+		<td> ON img</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_course_img</td>
+		<td > ( img ) ref <a href='#img'>img</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='img' onclick='window.scrollTo(100, 285);return false;' style='cursor:pointer;'><h2>Table img</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='img.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='img.src'>src</a></td>
+		<td> longtext   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;img&#95;0</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='link' onclick='window.scrollTo(295, 270);return false;' style='cursor:pointer;'><h2>Table link</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='link.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='link.name'>name</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='link.url'>url</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='link.icon'>icon</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='link.priority'>priority</a></td>
+		<td> int   DEFAULT 999 </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;link</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='status_batch' onclick='window.scrollTo(520, 300);return false;' style='cursor:pointer;'><h2>Table status_batch</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='status_batch.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='status_batch.name'>name</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='status_batch.active'>active</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='status_batch.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='status_batch.updated_date'>updated&#95;date</a></td>
+		<td> date   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;type&#95;batch&#95;0</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='batch_timing' onclick='window.scrollTo(670, 405);return false;' style='cursor:pointer;'><h2>Table batch_timing</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg></td>
+		<td><a name='batch_timing.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_timing.batch_topic'>batch&#95;topic</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch_timing.from_time'>from&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch_timing.to_time'>to&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch_timing.hrs'>hrs</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_timing.user'>user</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;batch&#95;timing</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;timing</td>
+		<td> ON batch&#95;topic</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;timing</td>
+		<td> ON user</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_timing_batch_topic</td>
+		<td > ( batch&#95;topic ) ref <a href='#batch&#95;topic'>batch&#95;topic</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_timing_user</td>
+		<td > ( user ) ref <a href='#user'>user</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='attendance' onclick='window.scrollTo(475, 75);return false;' style='cursor:pointer;'><h2>Table attendance</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg></td>
+		<td><a name='attendance.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='attendance.from_time'>from&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='attendance.to_time'>to&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='attendance.user'>user</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;attendances</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;attendances</td>
+		<td> ON user</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_attendances_user</td>
+		<td > ( user ) ref <a href='#user'>user</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='batch' onclick='window.scrollTo(400, 255);return false;' style='cursor:pointer;'><h2>Table batch</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='batch.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.name'>name</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch.type'>type</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch.course'>course</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.from_date'>from&#95;date</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.to_date'>to&#95;date</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.from_time'>from&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.to_time'>to&#95;time</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='batch.des'>des</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch.branch'>branch</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;batch</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch</td>
+		<td> ON course</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;0</td>
+		<td> ON branch</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;1</td>
+		<td> ON type</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_course</td>
+		<td > ( course ) ref <a href='#course'>course</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_branch</td>
+		<td > ( branch ) ref <a href='#branch'>branch</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_type_batch</td>
+		<td > ( type ) ref <a href='#type&#95;batch'>type&#95;batch</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='batch_topic' onclick='window.scrollTo(370, 480);return false;' style='cursor:pointer;'><h2>Table batch_topic</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='batch_topic.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_topic.batch'>batch</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_topic.status'>status</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_topic.topic'>topic</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;batch&#95;topic</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;topic</td>
+		<td> ON batch</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;topic</td>
+		<td> ON status</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;topic&#95;0</td>
+		<td> ON topic</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_topic_batch</td>
+		<td > ( batch ) ref <a href='#batch'>batch</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_topic_status_batch</td>
+		<td > ( status ) ref <a href='#status&#95;batch'>status&#95;batch</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_topic_batch_topic</td>
+		<td > ( topic ) ref <a href='#topic'>topic</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='topic' onclick='window.scrollTo(160, 300);return false;' style='cursor:pointer;'><h2>Table topic</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg><svg width='14' height='14'><use xlink:href='#ref'/></svg></td>
+		<td><a name='topic.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='topic.name'>name</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='topic.des'>des</a></td>
+		<td> varchar&#40; 100 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='topic.priority'>priority</a></td>
+		<td> int   DEFAULT 999 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='topic.course'>course</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='topic.parent_topic'>parent&#95;topic</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='topic.active'>active</a></td>
+		<td> bit   DEFAULT 1 </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='topic.updated_by'>updated&#95;by</a></td>
+		<td> varchar&#40; 30 &#41;   DEFAULT 'system' </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td><a name='topic.updated_date'>updated&#95;date</a></td>
+		<td> timestamp   DEFAULT CURRENT_TIMESTAMP </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;topic&#95;0</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>topic&#95;fk&#95;course&#95;0</td>
+		<td> ON course</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_topic_course</td>
+		<td > ( course ) ref <a href='#course'>course</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='batch_user' onclick='window.scrollTo(670, 285);return false;' style='cursor:pointer;'><h2>Table batch_user</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg></td>
+		<td><a name='batch_user.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_user.user'>user</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td>
+		<td><a name='batch_user.batch'>batch</a></td>
+		<td> varchar&#40; 50 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;batch&#95;user</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#idx'/></svg></td><td>idx&#95;batch&#95;user</td>
+		<td> ON user</td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Foreign Keys</th></tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_user_user</td>
+		<td > ( user ) ref <a href='#user'>user</a> (id) </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td><svg width='14' height='14'><use xlink:href='#fk'/></svg></td><td>fk_batch_user_batch_user</td>
+		<td > ( batch ) ref <a href='#batch'>batch</a> (id) </td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<br/><br/>
+<div class='section-header'><a name='timing' onclick='window.scrollTo(625, 45);return false;' style='cursor:pointer;'><h2>Table timing</h2></a></div>
+<table class='bordered'>
+<thead>
+<tr><th colspan='4'>Columns</a></th></tr>
+</thead>
+<tbody>
+	<tr>
+		<td>*<svg width='14' height='14'><use xlink:href='#pk'/></svg></td>
+		<td><a name='timing.id'>id</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='timing.name'>name</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><a name='timing.code'>code</a></td>
+		<td> varchar&#40; 30 &#41;   </td>
+		<td>  </td>
+	</tr>
+<tr><th colspan='4'>Indexes</th></tr>
+	<tr>		<td><svg width='14' height='14'><use xlink:href='#pk'/></svg></td><td>pk&#95;timing</td>
+		<td> ON id</td>
+		<td>  </td>
+	</tr>
+</tbody>
+</table>
+
+<p align='right'><a href='http://www.dbschema.com' style='color:#aaa'>Powered by DbSchema</a></p></body></html>

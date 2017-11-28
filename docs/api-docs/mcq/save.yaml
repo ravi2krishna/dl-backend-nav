@@ -1,0 +1,63 @@
+/mcq:
+    put:
+        tags:
+            - MCQ
+        description:
+            Update or Create Questions
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            des:
+                                type: string
+                                example: "Node Question"
+                            question:
+                                type: string
+                                example: "what is nodejs"
+                            isMultiAns:
+                                type: boolean
+                                example: false
+                            optionA:
+                                type: string
+                                example: "Run time Env"
+                            checkA:
+                                type: boolean
+                                example: true
+                            optionB:
+                                type: string
+                                example: "Framework"
+                            checkB:
+                                type: boolean
+                                example: false
+                            optionC:
+                                type: string
+                                example: "Server side scripting language"
+                            checkC:
+                                type: boolean
+                                example: false
+                            optionD:
+                                type: string
+                                example: "JSON DB"
+                            checkD:
+                                type: boolean
+                                example: false
+                            active:
+                                type: boolean
+                                example: true
+                            topic:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "topic id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

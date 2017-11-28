@@ -1,0 +1,75 @@
+import { App } from "./../utils/App";
+import { TopicLink } from "./../entities/TopicLink";
+import { TopicLinkDAO } from "./../dao/TopicLinkDAO";
+
+export class TopicLinkService {
+    private topicLinkDao: TopicLinkDAO;
+
+
+    constructor() {
+        this.topicLinkDao = new TopicLinkDAO();
+
+    }
+
+    async entity(id: string) {
+        try {
+            let data: any = await this.topicLinkDao.entity(id);
+            return Promise.resolve(data);
+        } catch (error) {
+            return Promise.reject(error);
+        }
+    }
+
+    async search(reqData: any) {
+        try {
+            let data: any = await this.topicLinkDao.search(reqData);
+            return Promise.resolve(data)
+        } catch (error) {
+            return Promise.reject(error);
+        }
+    }
+
+    async save(item: TopicLink) {
+        try {
+            if (this.validate(item)) {
+                let uid = App.UniqueNumber();
+                if (!item.id || item.id == '' || item.id == '0') {
+                    item.id = uid;
+                }
+
+                let linkData: any = await this.topicLinkDao.save(item);
+                let returnData = {
+                    id: item.id,
+                    message: "Saved Successfully"
+                }
+                return Promise.resolve(returnData);
+            } else {
+                let returnData = {
+                    message: "Please enter proper values."
+                }
+                return Promise.reject(returnData);
+            }
+
+        } catch (error) {
+            return Promise.reject(error);
+        }
+    }
+
+    async delete(id: any) {
+        try {
+            let data: TopicLink = (await this.topicLinkDao.entity(id));
+            let result: any = await this.topicLinkDao.delete(data);
+            let returnData = {
+                id: id,
+                message: "Removed Successfully"
+            }
+            return Promise.resolve(returnData);
+        } catch (error) {
+            return Promise.reject(error);
+        }
+    }
+
+    async validate(item: TopicLink) {
+        return true;
+    }
+}

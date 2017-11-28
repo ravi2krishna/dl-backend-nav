@@ -1,0 +1,33 @@
+/link:
+    put:
+        tags:
+            - Link
+        description:
+            Update or Create User Account
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "Link Name"
+                            url:
+                                type: string
+                                example: "/apex/account"
+                            icon:
+                                type: string
+                                example: "900090000"
+                            priority:
+                                type: number
+                                example: 1
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

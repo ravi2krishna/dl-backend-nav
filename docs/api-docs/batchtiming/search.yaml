@@ -1,0 +1,25 @@
+/batchtiming:
+    post:
+        tags:
+          - BatchTiming
+        description:
+            search.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            user:
+                                type: string
+                                example: "J6HOLS1V"
+                            toTime:
+                                type: string
+                                example: null
+                                description: optional
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

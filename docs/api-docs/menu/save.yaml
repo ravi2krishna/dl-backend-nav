@@ -1,0 +1,42 @@
+/menu:
+    put:
+        tags:
+            - Menu
+        description:
+            Update or Create User Account
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            active:
+                                type: boolean
+                                example: true
+                            updatedBy:
+                                type: string
+                                example: "updated id"
+                            updatedDate:
+                                type: Date
+                                example: null
+                            role:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "Role Id"
+                            link:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "Link Id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

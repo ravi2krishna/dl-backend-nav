@@ -1,0 +1,78 @@
+/user:
+    put:
+        tags:
+            - User
+        description:
+            Update or Create User Account
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            name:
+                                type: string
+                                example: "Name"
+                            email:
+                                type: string
+                                example: "name@gmail.com"
+                            mobile:
+                                type: string
+                                example: "900090000"
+                            password:
+                                type: string
+                                example: "name"
+                            active:
+                                type: boolean
+                                example: true
+                            updatedBy:
+                                type: string
+                                example: "id"
+                            updatedDate:
+                                type: Date
+                                example: null
+                            role:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "role id"
+                            address:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "name.address"
+                                    lane:
+                                        type: string
+                                        example: "8-2-603"
+                                    street:
+                                        type: string
+                                        example: "Stree"
+                                    city:
+                                        type: string
+                                        example: "Hyderabad"
+                                    state:
+                                        type: string
+                                        example: "Telangana"
+                                    country:
+                                        type: string
+                                        example: "India"
+                                    zipcode:
+                                        type: integer
+                                        example: 500089
+                            branch:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "branch id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

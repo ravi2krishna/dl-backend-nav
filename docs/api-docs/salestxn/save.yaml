@@ -1,0 +1,63 @@
+/salestxn:
+    put:
+        tags:
+            - SalesTxn
+        description:
+            save.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            id:
+                                type: string
+                                example: null
+                            quantity:
+                                type: integer
+                                example: "2017/01/20"
+                            unitPrice:
+                                type: integer
+                                example: ""
+                            discount:
+                                type: integer
+                                example: ""
+                            discountValue:
+                                type: string
+                                example: ""
+                            cgst:
+                                type: string
+                                example: ""
+                            sgst:
+                                type: string
+                                example: ""
+                            igst:
+                                type: string
+                                example: ""
+                            netAmount:
+                                type: integer
+                                example: ""
+                            taxAmount:
+                                type: string
+                                example: ""
+                            amount:
+                                type: integer
+                                example: ""
+                            sales:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "sales id"  
+                            product:
+                                type: object
+                                properties:
+                                    id:
+                                        type: string
+                                        example: "Product Id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"

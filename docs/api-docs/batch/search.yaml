@@ -1,0 +1,21 @@
+/batch:
+    post:
+        tags:
+          - Batch
+        description:
+            search.
+        parameters:
+          - name: body
+            in: body
+            schema:
+                type: object
+                properties:
+                    data:
+                        type: object
+                        properties:
+                            course:
+                                type: string
+                                example: "course id"
+        responses:
+            200:
+                description: "status:1 is success; status: 0 is failure;"
